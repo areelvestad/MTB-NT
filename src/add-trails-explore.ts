@@ -6,6 +6,9 @@ import { trailCanvas } from './add-canvas-explore';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXJlZWx2ZXN0YWQiLCJhIjoiY20xZ3UydHVyMDc3NzJtc2V3bnR5MXF2YSJ9.1GGwHsMIhkaYlwL5vMahGg';
 
+/* mapbox://styles/mapbox/outdoors-v12 */
+/* mapbox://styles/mapbox/satellite-v9 */
+
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/satellite-v9',
@@ -136,11 +139,12 @@ async function addTrailsToMap(map: mapboxgl.Map) {
                                 <i class="fa-solid fa-triangle-exclamation" style="display:none;"></i>
                                 </span>
                                 </h4>
-                                <div class="location">${trail.area}, ${trail.municipality}
+                                <div class="location"><i class="fa-solid fa-map-pin"></i>${trail.area}, ${trail.municipality}
                                     <div><i class="fa-solid fa-bicycle"></i>${trail.type}</div>
                                     <i class="fa-solid fa-person-hiking ${trail.hikingTrail}"></i>
                                 </div>
                                 <div class="images">
+                                <div class="zoom-to"><i class="fa-solid fa-binoculars"></i></div>
                                 <img src="/img/${trail.name}/01/${trail.name}_930.jpg">
                                 </div>
                                 <div class="info">

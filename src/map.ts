@@ -11,7 +11,7 @@ var map = new mapboxgl.Map({
     pitch: 75,
     bearing: 10,
     antialias: true,
-    interactive: true,
+    interactive: false,
     attributionControl: false
 });
 
