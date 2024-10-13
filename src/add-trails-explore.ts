@@ -6,8 +6,8 @@ import { trailCanvas } from './add-canvas-explore';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiYXJlZWx2ZXN0YWQiLCJhIjoiY20xZ3UydHVyMDc3NzJtc2V3bnR5MXF2YSJ9.1GGwHsMIhkaYlwL5vMahGg';
 
-/* mapbox://styles/mapbox/outdoors-v12 */
-/* mapbox://styles/mapbox/satellite-v9 */
+/* mapbox://styles/mapbox/outdoors-v12 Rart kart*/
+/* mapbox://styles/mapbox/satellite-v9 Satelittkart*/
 
 var map = new mapboxgl.Map({
     container: 'map',
