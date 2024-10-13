@@ -1,9 +1,9 @@
-name: Deploy BikePage to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main 
+      - main  # Adjust to your default branch
 
 jobs:
   build:
@@ -11,17 +11,17 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: '16'
 
     - name: Install dependencies
       run: npm install
 
-    - name: Build
+    - name: Build the project
       run: npm run build
 
     - name: Deploy to GitHub Pages
