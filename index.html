@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another BikePage</title>
+    <link rel="stylesheet" href="./src/app.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e32bde2416.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="top-nav"></nav>
+    <main class="main-intro">
+        <section class="intro">
+            <h1>En sti- og fjellsykkelguide<br><span>for Nord-Troms</span></h1>
+            <p>Utforsk og finn nye sykkelturer der du bor, i nabobygda eller ned 
+                et fjell du aldri har vært på. Nettstedet er under utvikling.</p>
+            <div>
+                <a href="/map.html"><span class="fa-solid fa-map"></span>utforsk kartet</a>
+                <a href=""><span class="fa-solid fa-book"></span>stikatalogen</a>
+            </div>
+        </section>
+        <section class="map-teaser">
+            <div id="map"></div>
+        </section>
+        <section class="description">
+            <span id="description-stats">
+            </span>
+            <p>Dette nettstedet er et hobbyprosjekt. Her finner du stier til skogs og til fjells i den 
+                flotte regionen vi bor i. Målet er å inspirere deg til å ta sykkelen til et sted den 
+                ikke har vært før, og samtidig vise fram de flotte stiene vi har.<br><br>
+                Til nå er det flest av stier med en god del høydemeter. Etter hvert er planen å få inn 
+                flere trimturer, langturer, og selvfølgelig turer i Kvænangen, Skjervøy, Kåfjord, Lyngen og Storfjord. <br><br>
+                Det er ikke noe konkurransesystem her, som man finner på Ut i Nord eller 
+                Strava. Trenger du motivsjon? Se gjennom katalogen, finn en fin fjelltopp, ta sykkelen 
+                opp dit å nyt utsikten.</p>
+            <div class="add-canvas-preview">
+                <div class="canvas-desc">
+                    <h2>Få innsik</h2>
+                    <p>Nettsiden gir deg mulighet til å få innsikt i stiene før du selv tar turen. Se informasjon som høydekurve, hvor mye nedoverbakke det er, eller om du må forvente å møte på turgåere.</p>
+                </div>
+                <div id="canvas"></div>
+            </div>
+            <div id="preview-stats"></div>
+            <i class="Riehppegáisá">data fra veien ned Riehppegáisá til Vaddas</i>
+            <div class="image-preview">
+                <img src="./img/Riehppegáisá/01/Riehppegáisá_930.jpg" alt="Riehppegáisá">
+                <div class="figcap">Foten av Riehppegáisá, Nordreisa</div>
+            </div>
+        </section>
+    </main>
+    <footer class="bottom-footer"></footer>
+    <script type="module" src="./src/loadComponents.ts"></script>
+    <script type="module" src="./src/index-stats"></script>
+    <script type="module" src="./src/map"></script>
+    <script type="module" src="./src/add-trails-preview"></script>
+    <script type="module" src="./src/add-canvas-preview.ts"></script>
+</body>
+</html>
