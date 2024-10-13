@@ -1,9 +1,16 @@
-// vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
+// Vite configuration for TypeScript projects without React
 export default defineConfig({
-  plugins: [react()],
-  base: '/BikePageVite/'
-})
+  build: {
+    outDir: 'dist', // or another directory where you want the output to go
+  },
+  server: {
+    open: true, // Opens the app in the browser automatically
+  },
+  resolve: {
+    alias: {
+      // Add any aliases you need here, like '@' to point to 'src'
+    },
+  },
+});
