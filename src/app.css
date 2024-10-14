@@ -11,13 +11,8 @@
     --font-main: Merriweather;
     --font-scribble: Gloria Hallelujah, cursive;
 
-    h1, h2, h3, h4, div, p, b, i, span, input {
+    h1, h2, h3, h4, div, p, b, a, input {
         font-family: var(--font-main);
-    }
-    .fa-solid {
-        font-family: 'Font Awesome 6 Free'!important;
-    }
-    * {
         color: var(--color-text);
         text-decoration: unset;
         font-weight: 400;
@@ -25,9 +20,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
-    };
-
-
+    }
 }
 html {
     background-color: var(--color-bg-2);
@@ -272,7 +265,8 @@ margin: 0;
             i.Riehppegáisá {
                 margin: 1rem 0;
                 padding: 0;
-                color: var(--color-bg-1)
+                color: var(--color-bg-1);
+                font-family: var(--font-main);
             }
             div.image-preview {
                 position: relative;
