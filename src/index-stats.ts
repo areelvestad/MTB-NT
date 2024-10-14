@@ -9,7 +9,7 @@ async function calculateTrailStats() {
   let numberOfTrails = listTrails.length;
 
   for (const trail of listTrails) {
-    const gpxPath = `/trails/${trail.name}.gpx`;
+    const gpxPath = `./trails/${trail.name}.gpx`;
 
     try {
       const response = await fetch(gpxPath);
