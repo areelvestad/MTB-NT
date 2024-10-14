@@ -23,7 +23,6 @@
     }
 }
 html {
-    touch-action: none; 
     background-color: var(--color-bg-2);
     margin: 0;
     padding: 0;
@@ -31,7 +30,6 @@ html {
 
 body {
     margin: 0;
-    touch-action: none; 
 
     nav.top-nav {
         width: 100%;
