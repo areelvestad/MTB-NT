@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="./src/app.css">
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e32bde2416.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-
 </head>
 <body>
     <nav class="top-nav"></nav>
@@ -58,5 +55,18 @@
     <script type="module" src="./src/map"></script>
     <script type="module" src="./src/add-trails-preview"></script>
     <script type="module" src="./src/add-canvas-preview.ts"></script>
+    <script>
+        window.onload = function () {
+          var span = document.createElement('span');
+        
+          span.className = 'fa-solid';
+          span.style.display = 'none';
+          document.body.insertBefore(span, document.body.firstChild);
+          
+          alert(window.getComputedStyle(span, null).getPropertyValue('font-family'));
+            
+          document.body.removeChild(span);
+        };
+        </script> 
 </body>
 </html>
