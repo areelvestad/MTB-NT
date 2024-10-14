@@ -11,16 +11,22 @@
     --font-main: Merriweather;
     --font-scribble: Gloria Hallelujah, cursive;
 
+    h1, h2, h3, h4, div, p, b, i, span, input {
+        font-family: var(--font-main);
+    }
+    .fa-solid {
+        font-family: 'Font Awesome 6 Free'!important;
+    }
     * {
         color: var(--color-text);
         text-decoration: unset;
-        font-family: var(--font-main);
         font-weight: 400;
         font-smooth: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
     };
+
 
 }
 html {
