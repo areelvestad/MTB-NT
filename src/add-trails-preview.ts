@@ -5,7 +5,7 @@ import { map } from './map';
 
 async function addTrailsToMap(map: mapboxgl.Map) {
   for (const trail of listTrails) {
-    const gpxPath = `/trails/${trail.name}.gpx`;
+    const gpxPath = `./trails/${trail.name}.gpx`;
 
     try {
       const response = await fetch(gpxPath);

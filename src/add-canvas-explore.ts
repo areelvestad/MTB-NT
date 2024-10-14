@@ -6,7 +6,7 @@ Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryS
 let hoveredDistance = 0;
 
 async function trailCanvas(trailName: string, onDistanceChange: (distance: number, lat?: number, lon?: number) => void) {
-  const gpxPath = `/trails/${trailName}.gpx`;
+  const gpxPath = `./trails/${trailName}.gpx`;
 
   try {
     const response = await fetch(gpxPath);

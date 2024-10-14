@@ -65,7 +65,7 @@ async function addTrailsToMap(map: mapboxgl.Map) {
     let activeTrail: string | null = null;
 
     for (const trail of listTrails) {
-        const gpxPath = `/trails/${trail.name}.gpx`;
+        const gpxPath = `./trails/${trail.name}.gpx`;
 
         try {
             const response = await fetch(gpxPath);
@@ -145,7 +145,7 @@ async function addTrailsToMap(map: mapboxgl.Map) {
                                 </div>
                                 <div class="images">
                                 <div class="zoom-to"><i class="fa-solid fa-binoculars"></i></div>
-                                <img src="/img/${trail.name}/01/${trail.name}_930.jpg">
+                                <img src="./img/${trail.name}/01/${trail.name}_930.jpg">
                                 </div>
                                 <div class="info">
                                     <div><i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km</div>

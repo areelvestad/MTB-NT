@@ -13,6 +13,6 @@ function loadHTML(selector: string, url: string) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadHTML('.top-nav', './src/components/nav.html');
-    loadHTML('.bottom-footer', './src/components/footer.html');
+    loadHTML('.top-nav', './components/nav.html');
+    loadHTML('.bottom-footer', './components/footer.html');
 });

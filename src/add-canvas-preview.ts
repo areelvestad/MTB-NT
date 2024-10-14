@@ -4,7 +4,7 @@ import { Chart, LineController, LineElement, PointElement, LinearScale, Category
 Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale, Title, Tooltip, Legend);
 
 async function trailCanvas(trailName: string) {
-  const gpxPath = `/trails/${trailName}.gpx`;
+  const gpxPath = `./trails/${trailName}.gpx`;
 
   try {
     const response = await fetch(gpxPath);

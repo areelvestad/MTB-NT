@@ -1,16 +1,21 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/BikePageVite/', // Ensures asset paths are correctly prefixed for GitHub Pages
+  base: '/BikePageVite/',
   build: {
-    outDir: 'dist', // Specifies the output directory (optional since 'dist' is default)
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        map: resolve(__dirname, 'map.html'), // Add additional HTML files if needed
+      }
+    }
   },
   server: {
-    open: true, // Opens the local server in the browser automatically when running dev mode
+    open: true,
   },
   resolve: {
-    alias: {
-      // Example: '@': '/src' - You can set up aliases if needed
-    },
+    alias: {},
   },
 });
