@@ -763,6 +763,66 @@ body {
         }
     }
 
+    main.trail {
+        display: flex;
+        flex-direction: column;
+        margin-inline: auto;
+        margin-block: 1rem;
+        max-width: 800px;
+
+        section.header {
+            margin-inline: 2rem;
+            padding-bottom: 1rem;
+
+            h1 {
+                margin: 0;
+                font-size: 3rem;
+                font-weight: bold;
+                color: var(--color-text);
+                margin-bottom: .5rem;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 1.25rem;
+                color: var(--color-text-faded);
+                margin-bottom: 1rem;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+
+        section.image-gallery {
+            margin-inline: 0;
+            margin-bottom: 1rem;
+            #gallery {
+                img {
+                    width: 100%;
+                    aspect-ratio: 16/10;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
+        }
+
+        section.trail-info {
+            margin-inline: 2rem;
+
+            p {
+                line-height: 1.5rem;
+                color: var(--color-text-faded);
+            }
+        }
+
+        section.trail-map {
+            margin: 0;
+        }
+    }
+
     footer.bottom-footer {
         width: 100%;
         background: var(--color-bg-2);

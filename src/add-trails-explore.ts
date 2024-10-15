@@ -165,7 +165,7 @@ async function addTrailsToMap(map: mapboxgl.Map) {
                                 </div>
                                 
                                 <div class="info-bottom">
-                                    <a class="trail-page" href="/">
+                                    <a class="trail-page" href="/MTB-NT/trail.html?name=${trail.name}&area=${trail.area}">
                                         <i class="fa-solid fa-circle-info"></i>
                                         Se mer
                                     </a>
@@ -282,3 +282,6 @@ map.on('load', () => {
     addMapControls(map);
     addTrailsToMap(map);
 });
+
+export { addTrailsToMap };
+export { map };
