@@ -127,7 +127,7 @@ const listTrails = [
     },
     {
         "municipality": "Nordreisa",
-        "area": "Ytre Nordreisa",
+        "area": "Bakkeby",
         "name": "Gjøvarden",
         "route": "Gjøvarden",
         "description": "Med en start hvor det er utsikt mot både Kågen og innover Reisafjorden, er det allere en god grunn for å ta turen til Gjøvarden. Stien ned fra toppen er tydelig og god med lite steiner. Det er ett vanskelig parti, som 99 prosent av oss nok vil trille sykkelen ned.",
