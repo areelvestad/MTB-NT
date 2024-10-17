@@ -58,17 +58,17 @@
         { "folder": "02", "description": "Vil man ha tørre sko, er det en hengebru litt forbi parkeringen ved Vaddas." }
       ],
       "Lånivannet": [
-        { "folder": "01", "description": "" },
-        { "folder": "02", "description": "" },
+        { "folder": "01", "description": "Lånivannet er drikkevannskilde, så man slipper å ta med badebuksa." },
+        { "folder": "02", "description": "Det er et relativt vanskelig terreng stien går igjennom. Bruk tid på tur opp til å planlegge hvordan man skal komme seg ned." },
         { "folder": "03", "description": "" },
         { "folder": "04", "description": "" },
-        { "folder": "05", "description": "" },
+        { "folder": "05", "description": "Her er det humpete sti til et vertikalt drop op cirka en meter, så rett på flatmark." },
         { "folder": "06", "description": "" }
       ],
       "Moskodalen": [
         { "folder": "01", "description": "" },
-        { "folder": "02", "description": "" },
-        { "folder": "03", "description": "" },
+        { "folder": "02", "description": "Det er svak oppoverbakke på gruveveien inn i Moskodalen. Går overraskende fort ned igjen her." },
+        { "folder": "03", "description": "Herfra og oppover er det en mer ulent vei/sti. Mye steiner og røtter." },
         { "folder": "04", "description": "" },
         { "folder": "05", "description": "" },
         { "folder": "06", "description": "" }
@@ -78,46 +78,46 @@
       ],
       "Pilteridalen": [
         { "folder": "01", "description": "" },
-        { "folder": "02", "description": "" },
-        { "folder": "03", "description": "" },
-        { "folder": "04", "description": "" },
+        { "folder": "02", "description": "Helt grei sti fra Pilterigammen og nedover. Noen plasser er det større hull." },
+        { "folder": "03", "description": "Den fineste biten er ved fossen." },
+        { "folder": "04", "description": "Så er det stein på stein på stein på stein." },
         { "folder": "05", "description": "" },
         { "folder": "06", "description": "" }
       ],
       "Puntadalen": [
-        { "folder": "01", "description": "" }
+        { "folder": "01", "description": "Puntadalen og Ørretvannet sett fra fjellsiden til Stuoraskáidi." }
       ],
       "Reašvárri": [
         { "folder": "01", "description": "" },
-        { "folder": "02", "description": "" },
-        { "folder": "03", "description": "" }
+        { "folder": "02", "description": "Første biten ned er på en sti med varierende vanskelighetsgrad." },
+        { "folder": "03", "description": "Og siste biten er på en fin skogsvei. Her kan det gå fort, hvis man ønsker litt fart." }
       ],
       "Riehppegáisá": [
         { "folder": "01", "description": "" },
-        { "folder": "02", "description": "" },
-        { "folder": "03", "description": "" },
-        { "folder": "04", "description": "" },
+        { "folder": "02", "description": "Denne veien går helt opp op skulderen til venstre for Riehppegáisá." },
+        { "folder": "03", "description": "Man må krysse 4 bekker på turen." },
+        { "folder": "04", "description": "Veien er svært variert. Her er det mye stein, men fullt mulig for de fleste å sykle ned." },
         { "folder": "05", "description": "" },
-        { "folder": "06", "description": "" },
-        { "folder": "07", "description": "" },
-        { "folder": "08", "description": "" },
-        { "folder": "09", "description": "" }
+        { "folder": "06", "description": "Man krysser Storelva to ganger hver vei, så er ikke en tur man tar på våren." },
+        { "folder": "07", "description": "Hengebrua er til venstre for parkeringen, men våt på føttene blir man uansett på tur opp og ned." },
+        { "folder": "08", "description": "Husk å betal vegavgift! Flott at det er en så god vei helt inn til Vaddas." },
+        { "folder": "09", "description": "Fra gruveveien opp skulderen. Ned her tar man det rolig. Fra veienden på toppen ser man Øksfjordjøkelen, inn i Navit, inn Geiraskaret mot Reisadalen." }
       ],
       "Saraelv": [
         { "folder": "01", "description": "Starten på nedstigningen er lett å se, men man kan fint sykle videre inn til Čárajávri og ha vannet som utgangspunkt." },
         { "folder": "02", "description": "" },
         { "folder": "03", "description": "" },
-        { "folder": "04", "description": "" },
-        { "folder": "05", "description": "" },
+        { "folder": "04", "description": "Et kort parti man må bruke pedalene på turen ned." },
+        { "folder": "05", "description": "Flere morsomme partier hvor man får igjen hvis man planlegger på tur opp hvor man skal sykle." },
         { "folder": "06", "description": "" },
         { "folder": "07", "description": "" }
       ],
       "Sarafossen": [
-        { "folder": "01", "description": "" },
+        { "folder": "01", "description": "Man kan sykle herfra og ned den bratte stien, men anbefaler det ikke. Det er raskeste veien å få sykkelen opp." },
         { "folder": "02", "description": "" },
-        { "folder": "03", "description": "" },
-        { "folder": "04", "description": "" },
-        { "folder": "05", "description": "" }
+        { "folder": "03", "description": "Et større drop, ellers enkel sti første halvdel." },
+        { "folder": "04", "description": "Like før man kommer til bunnen er det mye stein på stien." },
+        { "folder": "05", "description": "Man ender opp på en skogsvei som går til Bilto." }
       ],
       "Storbakklia": [
         { "folder": "01", "description": "" },
@@ -125,18 +125,18 @@
         { "folder": "03", "description": "" }
       ],
       "Truisku": [
-        { "folder": "01", "description": "" }
+        { "folder": "01", "description": "Fin utsikt. Se opp for turgåere." }
       ],
       "Utsikten": [
-        { "folder": "01", "description": "" },
-        { "folder": "02", "description": "" },
+        { "folder": "01", "description": "Kort tur opp og kort tur ned." },
+        { "folder": "02", "description": "Stien er utrolig morsom å sykle ned - passer for alle nivåer." },
         { "folder": "03", "description": "" }
       ],
       "Vinnelys": [
-        { "folder": "01", "description": "" },
+        { "folder": "01", "description": "Fra Svartfoss til Vinnelys går det traktorvei og anleggsvei." },
         { "folder": "02", "description": "" },
         { "folder": "03", "description": "" },
-        { "folder": "04", "description": "" }
+        { "folder": "04", "description": "Man må krysse tre elver, hvor kun en som det er noe særlig med vann i på sensommeren. Et par steder er også det større skade på veien, som her." }
       ]
     }
   }
