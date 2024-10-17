@@ -1,0 +1,143 @@
+{
+    "trails": {
+      "Beassejávrrit": [
+        { "folder": "01", "description": "Ikke verdens mest episke utgangspunkt, men man kan gå litt opp i høyden nordvest for vannet for å få en litt mer spenstig start (se kartet)." },
+        { "folder": "02", "description": "Som man kan se er det nydelig terreng og en tydelig sti man følger ned fra vannet." },
+        { "folder": "03", "description": "Like etter der forrige bilde er tatt, er det en litt kronglete bakke. Mye steiner over og rett under overflaten, i tillegg til at det er bratt." },
+        { "folder": "04", "description": "Stien på fjellryggen over saga er nydelig!" },
+        { "folder": "05", "description": "Det er to korte partier som kan være en utfordring å komme seg ned uten å gå av sykkelen. Ellers er turen greit egnet for nybegynnere." },
+        { "folder": "06", "description": "" },
+        { "folder": "07", "description": "Rett før man er tilbake på lysløypa" }
+      ],
+      "Brattlia": [
+        { "folder": "01", "description": "Starten på toppen av Jernelvdalen er høydepunktet på turen. Det er fint å fortsette innover til Sikkájávri." },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "Godt under skoggrensa er stien veldig steinete og stedvis uoversiktlig. Tunga må være rett i munnen, ellers havner man fort over rattet." },
+        { "folder": "04", "description": "" }
+      ],
+      "Báiskitvarden": [
+        { "folder": "01", "description": "Svært fin og variert sti den første kilometeren." },
+        { "folder": "02", "description": "" }
+      ],
+      "Fosselvfossen": [
+        { "folder": "01", "description": "Kort tur, men veldig mye artigere på sykkelen." },
+        { "folder": "02", "description": "Får du denne utsikten på tur opp, har du gått feil. Følg stien til høyre opp, så slipper du å dra sykkelen opp elvedalsia." },
+        { "folder": "03", "description": "" }
+      ],
+      "Gahperus": [
+        { "folder": "01", "description": "" }
+      ],
+      "Gjøvarden": [
+        { "folder": "01", "description": "For nybegynnere er det kanskje litt bratt, men stien ned første del er trygg og tydelig." },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "Oppe til høyre i bildet er det et svært krevende parti. Men forbi her er det flott. En strekning på 500 meter hvor man må bruke pedalene litt." },
+        { "folder": "04", "description": "Over bekken man krysser, kan man ta ned til venstre. Anbefaler ikke den stien, da nedenfor her er det rett og slett rævva." }
+      ],
+      "Jyppyrä": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "Stien under skogsgrensa ned mot Høgegga er veldig fin." },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "Største hinderet på turen. Her kan man trygt trille sykkelen ned." },
+        { "folder": "06", "description": "Veldig fint terreng å sykle i!" },
+        { "folder": "07", "description": "" }
+      ],
+      "Kvennes": [
+        { "folder": "01", "description": "" }
+      ],
+      "Langmyrfjellet": [
+        { "folder": "01", "description": "Det er langt opp, men til gjenjeld får man mye tid på sykkelen nedover igjen." },
+        { "folder": "02", "description": "Ved Langmyra kan man ta av mot Sappen ned en gammel linjevei. Den er stedvis veldig vanskelig å se." }
+      ],
+      "Lintuvaara": [
+        { "folder": "01", "description": "Fint område for en trimtur. Her går det mange stier og veier, så ruta på kartet er kun et forslag." },
+        { "folder": "02", "description": "Ved Svartvatnet er både stien og en gammel skogsvei så lite brukt at man ser den kun stedvis før man er forbi vannet." }
+      ],
+      "Luovosskáidi": [
+        { "folder": "01", "description": "Kort, men bratt opp Luovosskáidi. Herfra går det vei videre inn til Kvænangen og til Reisadalen." },
+        { "folder": "02", "description": "Vil man ha tørre sko, er det en hengebru litt forbi parkeringen ved Vaddas." }
+      ],
+      "Lånivannet": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "" },
+        { "folder": "06", "description": "" }
+      ],
+      "Moskodalen": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "" },
+        { "folder": "06", "description": "" }
+      ],
+      "Nordkjosfjellet": [
+        { "folder": "01", "description": "" }
+      ],
+      "Pilteridalen": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "" },
+        { "folder": "06", "description": "" }
+      ],
+      "Puntadalen": [
+        { "folder": "01", "description": "" }
+      ],
+      "Reašvárri": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" }
+      ],
+      "Riehppegáisá": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "" },
+        { "folder": "06", "description": "" },
+        { "folder": "07", "description": "" },
+        { "folder": "08", "description": "" },
+        { "folder": "09", "description": "" }
+      ],
+      "Saraelv": [
+        { "folder": "01", "description": "Starten på nedstigningen er lett å se, men man kan fint sykle videre inn til Čárajávri og ha vannet som utgangspunkt." },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "" },
+        { "folder": "06", "description": "" },
+        { "folder": "07", "description": "" }
+      ],
+      "Sarafossen": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "" }
+      ],
+      "Storbakklia": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" }
+      ],
+      "Truisku": [
+        { "folder": "01", "description": "" }
+      ],
+      "Utsikten": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" }
+      ],
+      "Vinnelys": [
+        { "folder": "01", "description": "" },
+        { "folder": "02", "description": "" },
+        { "folder": "03", "description": "" },
+        { "folder": "04", "description": "" }
+      ]
+    }
+  }
+  

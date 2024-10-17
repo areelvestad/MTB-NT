@@ -15,6 +15,9 @@ export default defineConfig({
   },
   server: {
     open: true,
+    proxy: {
+      '/foo': 'http://localhost:5173/',
+    }
   },
   resolve: {
     alias: {},
