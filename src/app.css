@@ -118,7 +118,7 @@ body {
                     overflow-y: auto;
                     z-index: 9999;
                     background: color-mix(in srgb, var(--color-text-faded) 25%, rgba(0,0,0,.0) 75%);
-                    backdrop-filter: blur(3px);
+                    backdrop-filter: blur(5px);
 
                     &:empty {
                         display: none;
@@ -149,6 +149,7 @@ body {
                             * { 
                                 color: var(--color-text);
                                 transform: translateX(-5px);
+                                text-shadow: 1px 1px 1px black;
                             }
                         }
                     }
@@ -883,10 +884,9 @@ body {
                 display: none;
 
                 img {
-                    height: 600px;
                     width: 100%;
                     border-radius: 1rem;
-                    aspect-ratio: 4/3;
+                    aspect-ratio: 8/6;
                     object-fit: cover;
                 }
           
@@ -971,6 +971,17 @@ body {
                 }
               }
             }
+
+            @media (max-width: 800px) {
+                &{
+                    margin-inline: 1rem;
+                }
+                .trail-image {
+                    img {
+                        aspect-ratio: 8/5!important;
+                    }
+                }
+            }
           }
           
 
@@ -1015,6 +1026,7 @@ body {
                 font-family: var(--font-scribble);
                 font-size: 2rem;
                 color: inherit;
+                text-align: center;
             }
 
             div.footer-contact {
