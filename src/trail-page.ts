@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                             map.addControl(new mapboxgl.NavigationControl());
                         }
-                        
+
                         let distanceMarker: mapboxgl.Marker | null = null;
                         await trailCanvas(trail.name, (distance, lat, lon) => {
                             distance = distance;
@@ -189,8 +189,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                                         element: distanceMarkerDiv,
                                         anchor: 'center',
                                     })
-                                    .setLngLat([lon, lat])
-                                    .addTo(map);
+                                        .setLngLat([lon, lat])
+                                        .addTo(map);
                                 } else {
                                     distanceMarker.setLngLat([lon, lat]);
                                 }
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }, 0);
         }
 
-        
+
     } else {
         console.error('Trail not found');
     }

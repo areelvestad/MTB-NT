@@ -95,7 +95,7 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                     'line-width': 5,
                 },
                 layout: {
-                    'line-cap': 'round', 
+                    'line-cap': 'round',
                     'line-join': 'round',
                     'line-sort-key': 1,
                 }
@@ -175,19 +175,19 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                             container.style.display = 'flex';
 
                             const canvasContainer = document.getElementById('canvas');
-                                if (canvasContainer) {
-                                    canvasContainer.addEventListener('mouseenter', () => {
-                                        if (distanceMarker) {
-                                            distanceMarker.getElement().style.display = 'flex';
-                                        }
-                                    });
+                            if (canvasContainer) {
+                                canvasContainer.addEventListener('mouseenter', () => {
+                                    if (distanceMarker) {
+                                        distanceMarker.getElement().style.display = 'flex';
+                                    }
+                                });
 
-                                    canvasContainer.addEventListener('mouseleave', () => {
-                                        if (distanceMarker) {
-                                            distanceMarker.getElement().style.display = 'none';
-                                        }
-                                    });
-                                }
+                                canvasContainer.addEventListener('mouseleave', () => {
+                                    if (distanceMarker) {
+                                        distanceMarker.getElement().style.display = 'none';
+                                    }
+                                });
+                            }
 
                             await trailCanvas(trail.name, (distance, lat, lon) => {
                                 distance = distance;
@@ -201,8 +201,8 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                                             element: distanceMarkerDiv,
                                             anchor: 'center',
                                         })
-                                        .setLngLat([lon, lat])
-                                        .addTo(map);
+                                            .setLngLat([lon, lat])
+                                            .addTo(map);
                                     } else {
                                         distanceMarker.setLngLat([lon, lat]);
                                     }

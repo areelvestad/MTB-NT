@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,13 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e32bde2416.js"></script>
 </head>
+
 <body>
     <nav class="top-nav"></nav>
     <main class="main-intro">
         <section class="intro">
             <h1>En sti- og fjellsykkelguide<br><span>for Nord-Troms</span></h1>
-            <p>Utforsk og finn nye sykkelturer der du bor, i nabobygda eller ned 
+            <p>Utforsk og finn nye sykkelturer der du bor, i nabobygda eller ned
                 et fjell du aldri har vært på. Nettstedet er under utvikling.</p>
             <div>
                 <a href="/MTB-NT/map.html"><span class="fa-solid fa-map"></span>utforsk kartet</a>
@@ -26,18 +28,20 @@
         <section class="description">
             <span id="description-stats">
             </span>
-            <p>Dette nettstedet er et hobbyprosjekt. Her finner du stier til skogs og til fjells i den 
-                flotte regionen vi bor i. Målet er å inspirere deg til å ta sykkelen til et sted den 
+            <p>Dette nettstedet er et hobbyprosjekt. Her finner du stier til skogs og til fjells i den
+                flotte regionen vi bor i. Målet er å inspirere deg til å ta sykkelen til et sted den
                 ikke har vært før, og samtidig vise fram de flotte stiene vi har.<br><br>
-                Til nå er det flest av stier med en god del høydemeter. Etter hvert er planen å få inn 
-                flere trimturer, langturer, og selvfølgelig turer i Kvænangen, Skjervøy, Kåfjord, Lyngen og Storfjord. <br><br>
-                Det er ikke noe konkurransesystem her, som man finner på Ut i Nord eller 
-                Strava. Trenger du motivsjon? Se gjennom katalogen, finn en fin fjelltopp, ta sykkelen 
+                Til nå er det flest av stier med en god del høydemeter. Etter hvert er planen å få inn
+                flere trimturer, langturer, og selvfølgelig turer i Kvænangen, Skjervøy, Kåfjord, Lyngen og Storfjord.
+                <br><br>
+                Det er ikke noe konkurransesystem her, som man finner på Ut i Nord eller
+                Strava. Trenger du motivsjon? Se gjennom katalogen, finn en fin fjelltopp, ta sykkelen
                 opp dit å nyt utsikten.</p>
             <div class="add-canvas-preview">
                 <div class="canvas-desc">
                     <h2>Innsikt</h2>
-                    <p>Nettsiden gir deg mulighet til å få innsikt i stiene før du selv tar turen. Se informasjon som høydekurve, hvor mye nedoverbakke det er, eller om du må vike for turgåere.</p>
+                    <p>Nettsiden gir deg mulighet til å få innsikt i stiene før du selv tar turen. Se informasjon som
+                        høydekurve, hvor mye nedoverbakke det er, eller om du må vike for turgåere.</p>
                 </div>
                 <div id="canvas"></div>
             </div>
@@ -56,4 +60,5 @@
     <script type="module" src="./src/add-trails-preview"></script>
     <script type="module" src="./src/add-canvas-preview.ts"></script>
 </body>
+
 </html>
