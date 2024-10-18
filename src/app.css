@@ -928,7 +928,8 @@ body {
       margin-inline: 0;
       margin-bottom: 1rem;
       position: relative;
-
+      touch-action: none;
+      
       * {
         box-sizing: border-box;
       }
