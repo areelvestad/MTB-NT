@@ -162,4 +162,4 @@ function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: numbe
   return R * c;
 }
 
-export { trailCanvas, hoveredDistance };
+export { trailCanvas };

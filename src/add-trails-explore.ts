@@ -61,10 +61,14 @@ map.on('load', () => {
 
 let distanceMarker: mapboxgl.Marker | null = null;
 
-async function addTrailsToMap(map: mapboxgl.Map) {
+async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
     let activeTrail: string | null = null;
 
     for (const trail of listTrails) {
+        if (trailNameFilter && trail.name !== trailNameFilter) {
+            continue;
+        }
+
         const gpxPath = `./trails/${trail.name}.gpx`;
 
         try {
@@ -129,41 +133,35 @@ async function addTrailsToMap(map: mapboxgl.Map) {
                     .addTo(map);
 
                 markerElement.addEventListener('click', async () => {
+
                     const container = document.getElementById('trail-info');
                     if (container) {
                         const stats = await calculateStatisticsForTrail(trail.name);
                         if (stats) {
                             container.innerHTML = `
                                 <div id="close">&times;</div>
-
                                 <h4>${trail.name}
                                     <span id="grade-mark" class='${trail.grade}'>
                                         <i class="fa-solid fa-triangle-exclamation" style="display:none;"></i>
                                     </span>
                                 </h4>
-
                                 <div class="location"><i class="fa-solid fa-map-pin"></i>${trail.area}, ${trail.municipality}
                                     <div><i class="fa-solid fa-bicycle"></i>${trail.type}</div>
                                     <i class="fa-solid fa-person-hiking ${trail.hikingTrail}"></i>
                                 </div>
-
                                 <div class="images">
                                     <div class="zoom-to"><i class="fa-solid fa-binoculars"></i></div>
                                     <img src="./img/${trail.name}/01/${trail.name}_930.jpg">
                                 </div>
-
                                 <div class="info">
                                     <div><i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km</div>
                                     <div><i class="fa-solid fa-arrow-trend-down"></i> ${stats.totalDescent.toFixed(0)} m</div>
                                     <div><i class="fa-solid fa-arrow-trend-up"></i> ${stats.totalAscent.toFixed(0)} m</div>
                                 </div>
-
                                 <p class="trail-desc">${trail.description}</p>
-                                
                                 <div class="canvas-container">
                                     <div id="canvas"></div>
                                 </div>
-                                
                                 <div class="info-bottom">
                                     <a class="trail-page" href="/MTB-NT/trail.html?name=${trail.name}&area=${trail.area}">
                                         <i class="fa-solid fa-circle-info"></i>
@@ -285,3 +283,4 @@ map.on('load', () => {
 
 export { addTrailsToMap };
 export { map };
+export { distanceMarker };
