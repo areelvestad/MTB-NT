@@ -300,7 +300,7 @@ const listTrails = [
         "route": "Riehppegáisá",
         "description": "Fra skulderen av Riehppegáisá følger man en gammel gruvevei ned til Vaddas. Nydelig natur! Bratt og nye stein sikksakk ned fjellsia, så god flyt ned til dalen, så opp og ned langs Storelidalen, og slutter med et raskt parti til Vaddas.",
         "type": "Enduro",
-        "grade": "red",
+        "grade": "blue",
         "water": "Elv",
         "severalRoutes": "Nei",
         "surface": "ATV-spor, stein, reinsti",
@@ -334,6 +334,19 @@ const listTrails = [
         "surface": "Sti, steiner, røtter",
         "hikingTrail": "Ja",
         "parking": "69.7553, 21.0222"
+    },
+    {
+        "municipality": "Nordreisa",
+        "area": "Bakkeby",
+        "name": "Sokkelvika",
+        "route": "Sokkelvika",
+        "description": "Morsom trimtur. Grei, men stedvis utrydelig sti ned til Bakkeby. Bratt opp Latterfjellet, morsomt og utfordrende ned. Start kan være ved havna i Sørkjosen eller ved Veibrink. Obs! Syklet ruta litt feil, så havnet i hagen til noen i Bakkeby.",
+        "grade": "blue",
+        "water": "Bekk, vann",
+        "severalRoutes": "Ja",
+        "surface": "Sti, steiner, røtter",
+        "hikingTrail": "Ja",
+        "parking": "69.8174, 20.8647"
     }
 ];
 

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <h1>${trail.name}</h1>
                     <h3>${trail.area}, ${trail.municipality}</h3>
                     <div class="info">
-                        <div><i class="fa-solid fa-stairs"></i>${trail.grade}</div>
+                        <div class="grade ${trail.grade}"><i class="fa-solid fa-stairs"></i></div>
                         <div><i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km</div>
                         <div><i class="fa-solid fa-arrow-trend-down"></i>${stats.totalDescent.toFixed(0)} m</div>
                         <div><i class="fa-solid fa-arrow-trend-up"></i>${stats.totalAscent.toFixed(0)} m</div>
@@ -51,6 +51,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 <section class="trail-info">
                     <p>${trail.description}</p>
+                    <div class="info">
+                        <div><i class="fa-regular fa-clock"></i> Tidsbruk</div>
+                        <div><i class="fa-solid fa-mountain"></i> 200 moh</div>
+                        <div><i class="fa-solid fa-person-hiking"></i> Tursti</div>
+                        <div><i class="fa-solid fa-tree"></i> Naturreservat</div>
+                        <div><i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter</div>
+                    </div>
+                    <div class="turbeskrivelse">
+                        <h4>Turbeskrivelse:</h4>
+                        <p>Masse tekst ...</p>
+                    </div>
                 </section>
 
                 <div class="map-canvas">
@@ -168,7 +179,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             });
 
                             map.fitBounds(bounds, {
-                                padding: 40,
+                                padding: 80,
                                 maxZoom: 14,
                                 linear: true,
                             });

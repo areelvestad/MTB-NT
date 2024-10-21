@@ -119,6 +119,13 @@
         { "folder": "04", "description": "Like før man kommer til bunnen er det mye stein på stien." },
         { "folder": "05", "description": "Man ender opp på en skogsvei som går til Bilto." }
       ],
+      "Sokkelvika": [
+        { "folder": "01", "description": "Fra Kopparhaugen ned mot Bakkeby. En av to nedstrigninger på turen." },
+        { "folder": "02", "description": "Porten ved gamle E6." },
+        { "folder": "03", "description": "Storvannet. herfra går det flere stier ned mot Bakkeby. Man kan også ta av mot toppen av Latterhaugen." },
+        { "folder": "04", "description": "Fint terreng på Latterfjellet." },
+        { "folder": "05", "description": "Herfra er grei stisykling tilbake til E6." }
+      ],
       "Storbakklia": [
         { "folder": "01", "description": "" },
         { "folder": "02", "description": "" },
@@ -129,8 +136,11 @@
       ],
       "Utsikten": [
         { "folder": "01", "description": "Kort tur opp og kort tur ned." },
-        { "folder": "02", "description": "Stien er utrolig morsom å sykle ned - passer for alle nivåer." },
-        { "folder": "03", "description": "" }
+        { "folder": "02", "description": "Artig terreng å leke seg i." },
+        { "folder": "03", "description": "Man kan å ha hytta som mål, men starte nedturen derfra er jo litt kjedelig." },
+        { "folder": "04", "description": "" },
+        { "folder": "05", "description": "Stien er utrolig morsom å sykle ned - passer for alle nivåer." },
+        { "folder": "06", "description": "" }
       ],
       "Vinnelys": [
         { "folder": "01", "description": "Fra Svartfoss til Vinnelys går det traktorvei og anleggsvei." },

@@ -1,4 +1,7 @@
-Page: Værmelding
+Trail page: 
+* Værmelding
+* Stats: 
+** Start moh
 
 Map: fikse zoom tile
 
