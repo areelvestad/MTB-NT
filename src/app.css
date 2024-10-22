@@ -526,6 +526,7 @@ body {
                         outline: 0.125rem solid rgba(255, 255, 255, 0.75);
                         cursor: pointer;
                         position: absolute;
+                        z-index: 9999;
                         left: -0.45rem;
                         top: -1rem;
                         display: flex;
@@ -573,6 +574,7 @@ body {
                     outline: 0.125rem solid rgb(255, 255, 255);
                     position: absolute;
                     display: flex;
+                    z-index: 900;
                 }
             }
 
@@ -1187,11 +1189,11 @@ body {
 
                 h4 {
                     font-size: 1.5rem;
-                    margin-block: 1rem .25rem;
+                    margin-block: 1.5rem .25rem;
                 }
 
                 p {
-                    margin-block: 0 1rem;
+                    margin-block: 0 1.5rem;
                     color: var(--color-text-faded);
                 }
 
