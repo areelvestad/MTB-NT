@@ -438,6 +438,7 @@ const listTrails = [
         "route": "Sokkelvika",
         "description": "Morsom trimtur. Grei, men stedvis utrydelig sti ned til Bakkeby. Bratt opp Latterfjellet, morsomt og utfordrende ned. Start kan være ved havna i Sørkjosen eller ved Veibrink. Obs! Syklet ruta litt feil, så havnet i hagen til noen i Bakkeby.",
         "turbeskrivelse": "",
+        "type": "Enduro",
         "grade": "blue",
         "water": "Bekk, vann",
         "severalRoutes": "Ja",

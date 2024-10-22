@@ -1173,14 +1173,12 @@ body {
 
                 div.tags {
                     display: none;
-
-                    &.Beitemark {
-                        display: block;
-                    }
-
-                    &.Naturreservat {
-                        display: block;
-                    }
+                }
+                div.tag-1.Beitemark {
+                    display: block
+                }
+                div.tag-2.Naturreservat {
+                    display: block;
                 }
             }
 
