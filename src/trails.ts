@@ -14,7 +14,8 @@ const listTrails = [
         "hikingTrail": "Nei",
         "parking": "69.5394, 21.3321",
         "time": "Kvart dag",
-        "tags": ""
+        "tags": "",
+        "yrid": "1-302403",
     },
     {
         "municipality": "Nordreisa",
@@ -31,7 +32,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.4975, 21.4341",
         "time": "Kvart dag",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-2704853"
     },
     {
         "municipality": "Nordreisa",
@@ -48,7 +50,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.8411, 21.1446",
         "time": "Halve dagen",
-        "tags": "Tursti Beitemark"
+        "tags": "Tursti Beitemark",
+        "yrid": "1-312221"
     },
     {
         "municipality": "Nordreisa",
@@ -65,7 +68,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.7931, 21.0522",
         "time": "Kvart dag",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-311862"
     },
     {
         "municipality": "Nordreisa",
@@ -82,7 +86,8 @@ const listTrails = [
         "hikingTrail": "Nei",
         "parking": "",
         "time": "Kvart dag",
-        "tags": "Naturreservat"
+        "tags": "Naturreservat",
+        "yrid": "1-309363"
     },
     {
         "municipality": "Nordreisa",
@@ -99,7 +104,8 @@ const listTrails = [
         "hikingTrail": "Nei",
         "parking": "69.5198, 21.3922",
         "time": "Kvart dag",
-        "tags": "Beitemark"
+        "tags": "Beitemark",
+        "yrid": "1-309335"
     },
     {
         "municipality": "Nordreisa",
@@ -116,7 +122,8 @@ const listTrails = [
         "hikingTrail": "Nei",
         "parking": "69.5198, 21.3922",
         "time": "Halve dagen",
-        "tags": "Beitemark"
+        "tags": "Beitemark",
+        "yrid": "1-309399"
     },
     {
         "municipality": "Nordreisa",
@@ -133,7 +140,8 @@ const listTrails = [
         "hikingTrail": "Nei",
         "parking": "69.8248, 21.4497",
         "time": "Kvart dag",
-        "tags": "Beitemark"
+        "tags": "Beitemark",
+        "yrid": "1-312684"
     },
     {
         "municipality": "Nordreisa",
@@ -150,7 +158,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.7642, 21.0651",
         "time": "Kvart dag",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-2738711"
     },
     {
         "municipality": "Nordreisa",
@@ -167,7 +176,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.8877, 20.9220",
         "time": "Kvart dag",
-        "tags": "Beitemark"
+        "tags": "Beitemark",
+        "yrid": "1-311700"
     },
     {
         "municipality": "Nordreisa",
@@ -184,7 +194,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.7553, 21.0222",
         "time": "Fort gjort",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-2738387"
     },
     {
         "municipality": "Nordreisa",
@@ -201,7 +212,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.8397, 21.2107",
         "time": "Fort gjort",
-        "tags": "Tursti Beitemark"
+        "tags": "Tursti Beitemark",
+        "yrid": "1-315040"
     },
     {
         "municipality": "Nordreisa",
@@ -218,7 +230,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.7863, 20.9476",
         "time": "Fort gjort",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "10-1091436"
     },
     {
         "municipality": "Nordreisa",
@@ -235,7 +248,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.7678, 20.7317",
         "time": "Kvart dag",
-        "tags": "Tursti Beitemark"
+        "tags": "Tursti Beitemark",
+        "yrid": "1-2737347"
     },
     {
         "municipality": "Nordreisa",
@@ -252,7 +266,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.70682, 21.27003",
         "time": "Halve dagen",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-309262"
     },
     {
         "municipality": "Nordreisa",
@@ -269,7 +284,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.76424271564689, 21.06507179191515",
         "time": "Halve dagen",
-        "tags": "Tursti Beitemark"
+        "tags": "Tursti Beitemark",
+        "yrid": "1-312373"
     },
     {
         "municipality": "Nordreisa",
@@ -286,7 +302,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.7863, 20.9476",
         "time": "Fort gjort",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "10-970961"
     },
     {
         "municipality": "Nordreisa",
@@ -303,7 +320,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.4727, 21.48772",
         "time": "Fort gjort",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-311923"
     },
     {
         "municipality": "Nordreisa",
@@ -320,7 +338,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.75134, 20.73557",
         "time": "Kvart dag",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-308920"
     },
     {
         "municipality": "Nordreisa",
@@ -337,7 +356,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.45012, 21.53775731",
         "time": "Kvart dag",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-302440"
     },
     {
         "municipality": "Nordreisa",
@@ -354,7 +374,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.782433, 21.035587",
         "time": "Fort gjort",
-        "tags": "Tursti Naturreservat"
+        "tags": "Tursti Naturreservat",
+        "yrid": "1-312312"
     },
     {
         "municipality": "Nordreisa",
@@ -371,7 +392,8 @@ const listTrails = [
         "hikingTrail": "Nei",
         "parking": "69.81166, 21.59379",
         "time": "Dagstur",
-        "tags": "Beitemark"
+        "tags": "Beitemark",
+        "yrid": "1-309216"
     },
     {
         "municipality": "Nordreisa",
@@ -388,7 +410,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.73662, 21.12021",
         "time": "Fort gjort",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-309206"
     },
     {
         "municipality": "Nordreisa",
@@ -405,7 +428,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.7553, 21.0222",
         "time": "Kvart dag",
-        "tags": "Tursti"
+        "tags": "Tursti",
+        "yrid": "1-308907"
     },
     {
         "municipality": "Nordreisa",
@@ -421,7 +445,8 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.8174, 20.8647",
         "time": "Kvart dag",
-        "tags": "Tursti Beitemark"
+        "tags": "Tursti Beitemark",
+        "yrid": "1-311803"
     }
 ];
 

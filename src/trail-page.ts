@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <div class="${trail.tags} tags"><i class="fa-solid fa-tree"></i> Naturreservat</div>
                         <div class="${trail.tags} tags"><i class="fa-solid fa-seedling"></i> Beitemark</div>
                     </div>
+
                     <div class="turbeskrivelse">
                         <h4>Turbeskrivelse</h4>
                         <p>${trail.turbeskrivelse}</p>
@@ -75,6 +76,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <div id="map" class="map"></div>
                     </section>
                 </div>
+                
+                <iframe src="https://www.yr.no/nb/innhold/${trail.yrid}/card.html?mode=dark"></iframe>
             `;
 
             let currentSlideIndex = 0;

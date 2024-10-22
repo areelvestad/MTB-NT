@@ -1302,6 +1302,13 @@ body {
             }
         }
 
+        iframe {
+            height: 380px; 
+            border: none;
+            border-radius: 1rem;
+            margin-inline: 1rem;
+            opacity: .75;
+        }
         @media (max-width: 800px) {
             .map-canvas {
                 flex-direction: column;
