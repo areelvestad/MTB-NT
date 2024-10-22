@@ -12,6 +12,8 @@ declare module 'trails' {
     surface: string;
     hikingTrail: string;
     parking: string;
+    time: string;
+    tags: string;
   }
   export const listTrails: Trail[];
 }

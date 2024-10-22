@@ -6,6 +6,8 @@ async function calculateStatisticsForTrail(trailName: string) {
   let totalAscent = 0;
   let totalDescent = 0;
   let totalTime = 0;
+  let elevationHigh = 0;
+  let elevationLow = 0;
   const trail = listTrails.find(t => t.name === trailName);
 
   if (!trail) {
@@ -24,7 +26,9 @@ async function calculateStatisticsForTrail(trailName: string) {
       throw error;
     }
 
-    totalKm = parsedGpx.tracks.reduce((distance, track) => distance + (track.distance.total / 1000), 0); // Convert meters to km
+    elevationHigh = parsedGpx.tracks.reduce((max, track) => Math.max(max, track.elevation?.maximum || 0), 0);
+    elevationLow = parsedGpx.tracks.reduce((min, track) => Math.min(min, track.elevation?.minimum || Infinity), Infinity);
+    totalKm = parsedGpx.tracks.reduce((distance, track) => distance + (track.distance.total / 1000), 0); 
     totalAscent = parsedGpx.tracks.reduce((ascent, track) => ascent + (track.elevation?.positive || 0), 0);
     totalDescent = parsedGpx.tracks.reduce((descent, track) => descent + (track.elevation?.negative || 0), 0);
     totalTime = parsedGpx.tracks.reduce((time, track) => {
@@ -33,7 +37,7 @@ async function calculateStatisticsForTrail(trailName: string) {
         const endTime = track.points[track.points.length - 1]?.time;
         if (startTime && endTime) {
           const diff = new Date(endTime).getTime() - new Date(startTime).getTime();
-          return time + diff / (1000 * 60); // Convert to minutes
+          return time + diff / (1000 * 60);
         }
       }
       return time;
@@ -44,6 +48,8 @@ async function calculateStatisticsForTrail(trailName: string) {
       totalAscent,
       totalDescent,
       totalTime,
+      elevationHigh,
+      elevationLow,
     };
   } catch (error) {
     console.error(`Failed to load GPX data for trail: ${trail.name}`, error);

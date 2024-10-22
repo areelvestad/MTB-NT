@@ -52,15 +52,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <section class="trail-info">
                     <p>${trail.description}</p>
                     <div class="info">
-                        <div><i class="fa-regular fa-clock"></i> Tidsbruk</div>
-                        <div><i class="fa-solid fa-mountain"></i> 200 moh</div>
-                        <div><i class="fa-solid fa-person-hiking"></i> Tursti</div>
-                        <div><i class="fa-solid fa-tree"></i> Naturreservat</div>
+                        <div class="type"><i class="fa-solid fa-bicycle"></i><div class="${trail.type}"></div></div>
+                        <div><i class="fa-solid fa-clock"></i><div>${trail.time}</div></div>
+                        <div><i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh</div>
                         <div><i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter</div>
+                        <div class="${trail.hikingTrail} hikingTrail"><i class="fa-solid fa-person-hiking"></i> Tursti</div>
+                        <div class="${trail.tags} tags"><i class="fa-solid fa-tree"></i> Naturreservat</div>
+                        <div class="${trail.tags} tags"><i class="fa-solid fa-seedling"></i> Beitemark</div>
                     </div>
                     <div class="turbeskrivelse">
-                        <h4>Turbeskrivelse:</h4>
-                        <p>Masse tekst ...</p>
+                        <h4>Turbeskrivelse</h4>
+                        <p>${trail.turbeskrivelse}</p>
                     </div>
                 </section>
 
