@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <div class="type"><i class="fa-solid fa-bicycle"></i><div class="${trail.type}"></div></div>
                         <div><i class="fa-solid fa-clock"></i><div>${trail.time}</div></div>
                         <div><i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh</div>
-                        <div><i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter</div>
+                        <div class="severalRoutes ${trail.severalRoutes}"><i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter</div>
                         <div class="${trail.hikingTrail} hikingTrail"><i class="fa-solid fa-person-hiking"></i> Tursti</div>
                         <div class="${trail.tags} tags tag-2"><i class="fa-solid fa-tree"></i> Naturreservat</div>
                         <div class="${trail.tags} tags tag-1"><i class="fa-solid fa-seedling"></i> Beitemark</div>
@@ -77,7 +77,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </section>
                 </div>
 
-                <iframe src="https://www.yr.no/nb/innhold/${trail.yrid}/card.html?mode=dark"></iframe>
+                <a class="iframe" href="https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/${trail.yrid}/">
+                    <iframe src="https://www.yr.no/nb/innhold/${trail.yrid}/card.html?mode=dark" allowtransparency="true" background="transparent"></iframe>
+                </a>
             `;
 
             let currentSlideIndex = 0;
