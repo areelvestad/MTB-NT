@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             });
 
                             map.addControl(new mapboxgl.NavigationControl());
+                            map.addControl(new mapboxgl.FullscreenControl());
                         }
 
                         let distanceMarker: mapboxgl.Marker | null = null;
