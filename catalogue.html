@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hjem</title>
+    <link rel="stylesheet" href="./src/app.css" />
+    <script src="https://kit.fontawesome.com/e32bde2416.js"></script>
+  </head>
+  <body>
+    <nav class="top-nav"></nav>
+    <main class="catalogue">
+        <section class="header">
+            <h1>Stikatalogen</h1>
+        </section>
+        <section class="trail-catalogue">
+            <div id="trail-filter"></div>
+            <div id="catalogue-items" class="catalogue-items"></div>
+        </section>
+    </main>
+    <footer class="bottom-footer"></footer>
+    <script type="module" src="./src/loadComponents.ts"></script>
+    <script type="module" src="./src/trail-catalogue.ts"></script>
+  </body>
+</html>

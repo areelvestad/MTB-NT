@@ -150,7 +150,6 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                                     <i class="fa-solid fa-person-hiking ${trail.hikingTrail}"></i>
                                 </div>
                                 <div class="images">
-                                    <div class="zoom-to"><i class="fa-solid fa-binoculars"></i></div>
                                     <img src="./img/${trail.name}/01/${trail.name}_930.jpg">
                                 </div>
                                 <div class="info">
@@ -165,10 +164,7 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                                 <div class="info-bottom">
                                     <a class="trail-page" href="/MTB-NT/trail.html?name=${trail.name}&area=${trail.area}">
                                         <i class="fa-solid fa-circle-info"></i>
-                                        Se mer
-                                    </a>
-                                    <a class="dld" href="/trails/${trail.name}.gpx" download="${trail.name}.gpx" class="download-link">
-                                        <i class="fa-solid fa-download"></i>
+                                        Mer om stien
                                     </a>
                                 </div>
                             `;

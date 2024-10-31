@@ -9,7 +9,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         map: resolve(__dirname, 'map.html'),
-        trail: resolve(__dirname, 'trail.html')
+        trail: resolve(__dirname, 'trail.html'),
+        catalogue: resolve(__dirname, 'catalogue.html')
       }
     }
   },
