@@ -27,12 +27,24 @@ document.addEventListener('DOMContentLoaded', async () => {
             mainTrailElement.innerHTML = `
                 <section class="header">
                     <h1>${trail.name}</h1>
-                    <h3>${trail.area}, ${trail.municipality}</h3>
+                    <h3><i class="fa-solid fa-map-pin"></i> ${trail.area}, ${trail.municipality}</h3>
                     <div class="info">
-                        <div class="grade ${trail.grade}"><i class="fa-solid fa-stairs"></i></div>
-                        <div><i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km</div>
-                        <div><i class="fa-solid fa-arrow-trend-down"></i>${stats.totalDescent.toFixed(0)} m</div>
-                        <div><i class="fa-solid fa-arrow-trend-up"></i>${stats.totalAscent.toFixed(0)} m</div>
+                        <div class="grade ${trail.grade} tooltip">
+                            <i class="fa-solid fa-stairs"></i>
+                            <span class="tooltip-text ${trail.grade}"></span>
+                        </div>
+                        <div class="tooltip">
+                            <i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km
+                            <span class="tooltip-text" data-tooltip="Distanse"></span>
+                        </div>
+                        <div class="tooltip">
+                            <i class="fa-solid fa-arrow-trend-down"></i>${stats.totalDescent.toFixed(0)} m
+                            <span class="tooltip-text" data-tooltip="Nedstigning"></span>
+                        </div>
+                        <div class="tooltip">
+                            <i class="fa-solid fa-arrow-trend-up"></i>${stats.totalAscent.toFixed(0)} m
+                            <span class="tooltip-text" data-tooltip="Oppstigning"></span>
+                        </div>
                     </div>
                 </section>
 
@@ -52,13 +64,34 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <section class="trail-info">
                     <p>${trail.description}</p>
                     <div class="info">
-                        <div class="type"><i class="fa-solid fa-bicycle"></i><div class="${trail.type}"></div></div>
-                        <div><i class="fa-solid fa-clock"></i><div>${trail.time}</div></div>
-                        <div><i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh</div>
-                        <div class="severalRoutes ${trail.severalRoutes}"><i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter</div>
-                        <div class="${trail.hikingTrail} hikingTrail"><i class="fa-solid fa-person-hiking"></i> Tursti</div>
-                        <div class="${trail.tags} tags tag-2"><i class="fa-solid fa-tree"></i> Naturreservat</div>
-                        <div class="${trail.tags} tags tag-1"><i class="fa-solid fa-seedling"></i> Beitemark</div>
+                        <div class="type tooltip">
+                            <i class="fa-solid fa-bicycle"></i><div class="${trail.type}"></div>
+                            <span class="tooltip-text ${trail.type}"></span>
+                        </div>
+                        <div class="tooltip">
+                            <i class="fa-solid fa-clock"></i><div>${trail.time}</div>
+                            <span class="tooltip-text ${trail.time}"></span>
+                        </div>
+                        <div class="tooltip">
+                            <i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh
+                            <span class="tooltip-text" data-tooltip="Høyeste punkt på turen"></span>
+                        </div>
+                        <div class="severalRoutes ${trail.severalRoutes} tooltip">
+                            <i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter
+                            <span class="tooltip-text" data-tooltip="Flere veivalg man kan ta. Ruten er et forslag"></span>
+                        </div>
+                        <div class="${trail.hikingTrail} hikingTrail tooltip">
+                            <i class="fa-solid fa-person-hiking"></i> Tursti
+                            <span class="tooltip-text" data-tooltip="Populær tursti og/eller Ut i Nord-tur"></span>
+                        </div>
+                        <div class="${trail.tags} tags tag-2 tooltip">
+                            <i class="fa-solid fa-tree"></i> Naturreservat
+                            <span class="tooltip-text" data-tooltip="Vernet område. Kan være restriksjoner på bruk av elsykkel"></span>
+                        </div>
+                        <div class="${trail.tags} tags tag-1 tooltip">
+                            <i class="fa-solid fa-seedling"></i> Beitemark
+                            <span class="tooltip-text" data-tooltip="Beiteområde for sau/rein. Vis hensyn!"></span>
+                        </div>
                     </div>
 
                     <div class="turbeskrivelse">

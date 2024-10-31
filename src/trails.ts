@@ -49,7 +49,7 @@ const listTrails = [
         "surface": "Steinete sti, fast skogsvei",
         "hikingTrail": "Ja",
         "parking": "69.8411, 21.1446",
-        "time": "Halve dagen",
+        "time": "Kvart dag",
         "tags": "Tursti Beitemark",
         "yrid": "1-312221"
     },
@@ -169,7 +169,7 @@ const listTrails = [
         "description": "Med en start hvor det er utsikt mot både Kågen og innover Reisafjorden, er det allere en god grunn for å ta turen til Gjøvarden. Stien ned fra toppen er tydelig og god med lite steiner. Det er ett vanskelig parti, som 99 prosent av oss nok vil trille sykkelen ned.",
         "turbeskrivelse": "",
         "type": "Enduro",
-        "grade": "green",
+        "grade": "blue",
         "water": "Bekk",
         "severalRoutes": "Ja",
         "surface": "Fast sti, steinete sti, røtter",

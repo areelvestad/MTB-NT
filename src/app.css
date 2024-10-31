@@ -41,6 +41,86 @@ html {
     padding: 0;
 }
 
+/* Global */
+
+.tooltip {
+    position: relative;
+
+    .tooltip-text {
+        display: none;
+        margin: 0;
+    }
+
+    .tooltip-text::before {
+        content: none;
+        position: absolute;
+        bottom: calc(100%);
+        left: 0;
+        height: fit-content;
+        min-width: fit-content;
+        padding: .25rem .5rem;
+        margin: 0;
+        background: var(--color-text);
+        border-radius: 1rem 1rem 1rem 0;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+        font-size: .75rem;
+        color: var(--color-bg-2);
+        font-family: var(--font-main);
+        font-weight: 500;
+        display: none;
+        margin-right: 1rem;
+        text-wrap: wrap;
+    }
+
+    :hover ~ .tooltip-text::before {
+        display: flex;
+        content: attr(data-tooltip);
+    }
+    :hover ~ .tooltip-text {
+        display: flex;
+        position: absolute;
+        bottom: calc(100% + .5rem);
+        left: 0;
+        width: 150%;
+    }
+
+    :hover ~ .white.tooltip-text::before {
+        content: 'Ingen bratte eller mer krevende partier. Passer for nybegynnere.';
+    }
+    :hover ~ .green.tooltip-text::before {
+        content: 'Få eller ingen større hindre og skumle partier. Krever noe kjennskap for sykling i terreng.';
+    }
+    :hover ~ .blue.tooltip-text::before {
+        content: 'Bratte partier, steiner og hinder på stien.';
+    }
+    :hover ~ .red.tooltip-text::before {
+        content: 'Krevende partier, bratt, steiner, større hindre, og generelt større risiko.';
+    }
+    :hover ~ .black.tooltip-text::before {
+        content: 'Svært krevende å holde seg på sykkelen hele turen ned. Flere større hindre på stien og partier med større risiko ved fall selv i lav fart.';
+    }
+
+    :hover ~ span.Enduro.tooltip-text::before {
+        content: 'I hovedsak oppoverbakke fra start til slutt.';
+    }
+    :hover ~ span.XC.tooltip-text::before {
+        content: 'Lite til ingen opp- og nedstigning av betydning.';
+    }
+
+    :hover ~ .Fort.tooltip-text::before {
+        content: 'Beregn rundt en times tid';
+    }
+    :hover ~ .Kvart.tooltip-text::before {
+        content: 'Beregn 2 til 4 timer på turen';
+    }
+    :hover ~ .Halve.tooltip-text::before {
+        content: 'Rundt 4 timer eller mer på turen';
+    }
+    :hover ~ .Dagstur.tooltip-text::before {
+        content: 'Dagens mål! Beregn mer enn 5 timer';
+    }
+}
+
 body {
     min-height: 100svh;
     margin: 0;
@@ -883,7 +963,6 @@ body {
                     }
 
                     div.info {
-
                         gap: 0;
                         font-size: 0.7rem;
                         width: fit-content;
@@ -921,6 +1000,26 @@ body {
         margin-inline: auto;
         margin-block: 1rem;
         max-width: 800px;
+
+        div.finner-ikke {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 800px;
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 30rem;
+            font-size: 2rem;
+            font-family: var(--font-scribble);
+            color: var(--color-text-faded);
+            i {
+                font-size: 1rem;
+                color: var(--color-text-faded);
+                font-family: var(--font-main);
+            }
+        }
 
         section.header {
             margin-inline: 2rem;
@@ -988,7 +1087,7 @@ body {
                 .grade.green::after {
                     content: 'For de fleste';
                 }
-
+                
                 .blue>i {
                     background-color: rgb(28, 73, 199);
                 }
@@ -1185,11 +1284,11 @@ body {
                 }
 
                 div.type {
-                    .Enduro::after {
+                    div.Enduro::after {
                         content: 'Beint ned';
                     }
 
-                    .XC::after {
+                    div.XC::after {
                         content: 'Rett fram';
                     }
                 }
