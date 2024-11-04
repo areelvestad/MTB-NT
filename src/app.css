@@ -431,6 +431,7 @@ body {
             span {
                 display: flex;
                 justify-content: center;
+                text-align: center;
                 align-items: center;
                 text-transform: lowercase;
                 margin-top: 1rem;
@@ -441,6 +442,7 @@ body {
             width: 100%;
             max-width: 100vw;
             position: relative;
+            margin-inline: 0.5rem;
 
             p {
                 color: var(--color-text-faded);
@@ -516,7 +518,6 @@ body {
 
             i.Riehppegáisá {
                 margin: 1rem 0;
-                padding: 0;
                 color: var(--color-bg-1);
                 font-family: var(--font-main);
             }
@@ -527,7 +528,7 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 2rem;
+                padding-inline: .5rem;
 
                 img {
                     margin-top: 1rem;
@@ -542,7 +543,7 @@ body {
                 div.figcap {
                     position: absolute;
                     text-align: center;
-                    bottom: 0.5rem;
+                    bottom: 0.25rem;
                     z-index: 999;
                     padding: 0.5rem 1rem;
                     border-radius: 1rem;
