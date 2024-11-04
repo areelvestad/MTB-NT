@@ -10,6 +10,7 @@
     --color-text-faded: rgb(167, 182, 166);
     --font-main: Merriweather;
     --font-scribble: Gloria Hallelujah, cursive;
+    --heigh-with-nav: calc(100svh - 3.25rem);
 
     h1,
     h2,
@@ -287,7 +288,7 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 3rem;
-        margin-inline: 0.5rem;
+        margin-bottom: 3rem;
 
         section {
             display: flex;
@@ -296,10 +297,29 @@ body {
             align-items: center;
             margin: auto;
             max-width: 600px;
+            margin-inline: 0.5rem;
         }
 
         section.intro {
             text-align: center;
+            height: var(--heigh-with-nav);
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            justify-content: center;
+            overflow: hidden;
+            margin: unset;
+            text-shadow: 2px 2px 3px black;
+
+            img {
+                width: 100vw;
+                height: var(--heigh-with-nav);
+                position: absolute;
+                object-fit: cover;
+                margin: 0;
+                top: 0;
+                z-index: 0;
+            }
 
             h1 {
                 text-transform: lowercase;
@@ -307,19 +327,22 @@ body {
                 margin-top: 3rem;
                 font-size: 3rem;
                 margin-bottom: 0;
+                z-index: 100;
 
                 span {
                     font-weight: inherit;
                     font-size: 4rem;
+                    z-index: 100;
                 }
             }
 
             p {
-                color: var(--color-text-faded);
+                color: var(--color-text);
                 font-weight: 400;
                 line-height: 2rem;
                 font-size: 1.25rem;
                 margin-bottom: 3rem;
+                z-index: 100;
             }
 
             div {
@@ -327,6 +350,8 @@ body {
                 display: flex;
                 flex-direction: row;
                 gap: 0.75rem;
+                z-index: 100;
+                text-shadow: none;
 
                 a {
                     background-color: var(--color-text-faded);
@@ -380,28 +405,14 @@ body {
 
         section.map-teaser {
             width: 100%;
-            margin-inline: 1rem;
             max-width: 800px;
-            border-radius: 1rem;
-            background-color: rgb(42, 49, 42);
-            filter: drop-shadow(2px 2px 1rem black);
-            overflow: hidden;
-            inherits: none;
+            padding-inline: .5rem;
 
             #map {
                 height: 400px;
                 width: 100%;
-            }
-
-            .mapboxgl-ctrl-attrib {
                 border-radius: 1rem;
-                text-wrap: nowrap;
-                background-color: rgb(255, 255, 255);
-
-                * {
-                    font-family: "Roboto";
-                    color: black;
-                }
+                
             }
 
             div.trail-marker-preview {
@@ -416,34 +427,26 @@ body {
                 color: whitesmoke;
                 text-transform: capitalize;
             }
-        }
-
-        @media (max-width: 800px) {
-            section.map-teaser {
-                width: 90%;
-            }
-        }
-
-        section.description {
-            width: 100%;
-            max-width: 100vw;
-            position: relative;
-            margin-bottom: 3rem;
 
             span {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 text-transform: lowercase;
-                margin-bottom: 3rem;
+                margin-top: 1rem;
             }
+        }
+
+        section.description, section.innsikt {
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
 
             p {
                 color: var(--color-text-faded);
                 line-height: 1.5rem;
                 text-align: center;
                 max-width: 600px;
-                margin-bottom: 3rem;
             }
 
             div.add-canvas-preview {
@@ -802,19 +805,31 @@ body {
                         color: var(--color-text-faded);
                     }
                 }
-
-                
-                div.info {
+                .img-info {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    gap: 1rem;
-                    margin-inline: 0.5rem;
-                    margin-bottom: 0.5rem;
-                    text-wrap: nowrap;
+                    flex-direction: column
+                    ;
+                    div.images {
+                        margin: 0;
 
-                    i {
-                        margin-right: 0.5rem;
+                        img {
+                            aspect-ratio: 4/3;
+                            object-fit: cover;
+                            border-radius: 1rem;
+                            width: 100%;
+                        }
+                    }
+    
+                    div.info {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin: 0.5rem;
+                        text-wrap: nowrap;
+
+                        i {
+                            margin-right: 0.5rem;
+                        }
                     }
                 }
 
@@ -825,19 +840,6 @@ body {
                     margin-bottom: 0.75rem;
                 }
 
-                .images {
-                    display: flex;
-                    flex-direction: row;
-                    position: relative;
-
-                    img {
-                        aspect-ratio: 16/9;
-                        object-fit: cover;
-                        border-radius: 1rem;
-                        margin-block: 0.25rem 1rem;
-                        width: 100%;
-                    }
-                }
 
                 div.canvas-container {
                     width: 100%;
@@ -932,26 +934,33 @@ body {
                         min-width: 100%;
                     }
 
-                    div.images {
+                    .img-info {
                         display: flex;
-                        height: 150px;
-                        margin: 0;
-                        padding: 0;
-                        flex-grow: 1;
-                        aspect-ratio: unset;
-                    }
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        margin-block: 0 .25rem;
 
-                    div.info {
-                        gap: unset;
-                        margin: 0 0 0 1rem;
-                        font-size: .75rem;
-                        flex-grow: 1;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        align-items: center;
- 
-                        i {
-                            margin-right: 0.25rem;
+                        div.images {
+                            margin: 0;
+    
+                            img {
+                                aspect-ratio: 16/9;
+                                object-fit: cover;
+                                border-radius: 1rem;
+                                width: 100%;
+                            }
+                        }
+        
+                        div.info {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            margin: 0rem 1rem;
+                            text-wrap: nowrap;
+    
+                            i {
+                                margin-right: 0.5rem;
+                            }
                         }
                     }
 
@@ -969,6 +978,11 @@ body {
                     div.info-bottom {
                         margin-block: .5rem;
                     }
+                }
+            }
+            @media (max-height: 800px) {
+                .trail-desc {
+                    display: none;
                 }
             }
         }

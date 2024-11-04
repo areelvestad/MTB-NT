@@ -141,7 +141,7 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                             container.innerHTML = `
                                 <div id="close">&times;</div>
                                 <h4>${trail.name}
-                                    <span id="grade-mark" class='${trail.grade}'>
+                                    <span id="grade-mark" class="${trail.grade}">
                                         <i class="fa-solid fa-triangle-exclamation" style="display:none;"></i>
                                     </span>
                                 </h4>
@@ -149,13 +149,24 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                                     <div><i class="fa-solid fa-bicycle"></i>${trail.type}</div>
                                     <i class="fa-solid fa-person-hiking ${trail.hikingTrail}"></i>
                                 </div>
-                                <div class="images">
-                                    <img src="./img/${trail.name}/01/${trail.name}_930.jpg">
-                                </div>
-                                <div class="info">
-                                    <div><i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km</div>
-                                    <div><i class="fa-solid fa-arrow-trend-down"></i> ${stats.totalDescent.toFixed(0)} m</div>
-                                    <div><i class="fa-solid fa-arrow-trend-up"></i> ${stats.totalAscent.toFixed(0)} m</div>
+                                <div class="img-info">
+                                    <div class="images">
+                                        <img src="./img/${trail.name}/01/${trail.name}_930.jpg">
+                                    </div>
+                                    <div class="info">
+                                        <div class="tooltip">
+                                            <i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km
+                                            <span class="tooltip-text" data-tooltip="Distanse"></span>
+                                        </div>
+                                        <div class="tooltip">
+                                            <i class="fa-solid fa-arrow-trend-down"></i> ${stats.totalDescent.toFixed(0)} m
+                                            <span class="tooltip-text" data-tooltip="Nedstigning"></span>
+                                        </div>
+                                        <div class="tooltip">
+                                            <i class="fa-solid fa-arrow-trend-up"></i> ${stats.totalAscent.toFixed(0)} m
+                                            <span class="tooltip-text" data-tooltip="Oppstigning"></span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <p class="trail-desc">${trail.description}</p>
                                 <div class="canvas-container">
