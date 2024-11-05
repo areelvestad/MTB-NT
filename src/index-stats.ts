@@ -1,4 +1,3 @@
-// src/trail-stats.ts
 import { listTrails } from './trails';
 import { parseGPX } from '@we-gold/gpxjs';
 import { calculateStatisticsForTrail } from './trail-stats';
@@ -30,22 +29,19 @@ async function calculateTrailStats() {
   const descriptionStatsElement = document.getElementById('description-stats');
   if (descriptionStatsElement) {
     descriptionStatsElement.innerHTML = `
-      <div> totalt er det ${numberOfTrails} stier med til sammen ${totalKm.toFixed(0)} kilometer og ${totalDescent.toFixed(0)} meter med nedstigning</div>`;
+      <div>Her finner du ${numberOfTrails} stier med til sammen ${totalKm.toFixed(0)} kilometer som har ${totalDescent.toFixed(0)} meter med nedoverbakke</div>`;
   }
 }
 
 async function addTrailStatsToPreview(trailName: string) {
   try {
-    // Get the statistics for the trail
     const stats = await calculateStatisticsForTrail(trailName);
     if (!stats) {
       throw new Error(`Statistics for trail ${trailName} could not be retrieved.`);
     }
 
-    // Find the container to add the stats
     const previewStatsContainer = document.getElementById('preview-stats');
     if (previewStatsContainer) {
-      // Populate the container with the statistics
       previewStatsContainer.innerHTML = `
         <div class="info">
           <div><i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km fra topp til bunn</div>
