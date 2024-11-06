@@ -145,9 +145,14 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                                         <i class="fa-solid fa-triangle-exclamation" style="display:none;"></i>
                                     </span>
                                 </h4>
-                                <div class="location"><i class="fa-solid fa-map-pin"></i>${trail.area}, ${trail.municipality}
-                                    <div><i class="fa-solid fa-bicycle"></i>${trail.type}</div>
-                                    <i class="fa-solid fa-person-hiking ${trail.hikingTrail}"></i>
+                                <div class="location">
+                                    <span>
+                                        <i class="fa-solid fa-map-pin"></i>${trail.area}, ${trail.municipality}
+                                    </span>
+                                    <div class="tooltip">
+                                        <i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh
+                                        <span class="tooltip-text" data-tooltip="Høyeste punkt"></span>
+                                    </div>
                                 </div>
                                 <div class="img-info">
                                     <div class="images">

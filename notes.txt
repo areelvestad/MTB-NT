@@ -1,10 +1,8 @@
 Trail page: 
-* Værmelding
-* Stats: 
-** Start moh
 
-Map: fikse zoom tile
+Map: fikse zoom til
 
 
 List:
 * Trail visibility
+* kontaktperson for sti

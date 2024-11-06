@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="info">
                         <div class="grade ${trail.grade} tooltip">
                             <i class="fa-solid fa-stairs"></i>
-                            <span class="tooltip-text ${trail.grade}"></span>
+                            <span class="tooltip-text trail-grade"></span>
                         </div>
                         <div class="tooltip">
                             <i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km
@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <section class="trail-info">
                     <p>${trail.description}</p>
                     <div class="info">
+                        <div class="tooltip">
+                            <i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh
+                            <span class="tooltip-text" data-tooltip="Høyeste punkt"></span>
+                        </div>
                         <div class="type tooltip">
                             <i class="fa-solid fa-bicycle"></i><div class="${trail.type}"></div>
                             <span class="tooltip-text ${trail.type}"></span>
@@ -72,25 +76,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <i class="fa-solid fa-clock"></i><div>${trail.time}</div>
                             <span class="tooltip-text ${trail.time}"></span>
                         </div>
-                        <div class="tooltip">
-                            <i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh
-                            <span class="tooltip-text" data-tooltip="Høyeste punkt på turen"></span>
-                        </div>
                         <div class="severalRoutes ${trail.severalRoutes} tooltip">
                             <i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter
                             <span class="tooltip-text" data-tooltip="Flere veivalg man kan ta. Ruten er et forslag"></span>
                         </div>
                         <div class="${trail.hikingTrail} hikingTrail tooltip">
                             <i class="fa-solid fa-person-hiking"></i> Tursti
-                            <span class="tooltip-text" data-tooltip="Populær tursti og/eller Ut i Nord-tur"></span>
+                            <span class="tooltip-text" data-tooltip="Vis hensyn for turgåere!"></span>
                         </div>
                         <div class="${trail.tags} tags tag-2 tooltip">
                             <i class="fa-solid fa-tree"></i> Naturreservat
-                            <span class="tooltip-text" data-tooltip="Vernet område. Kan være restriksjoner på bruk av elsykkel"></span>
+                            <span class="tooltip-text" data-tooltip="Kan være restriksjoner på bruk av elsykkel"></span>
                         </div>
                         <div class="${trail.tags} tags tag-1 tooltip">
                             <i class="fa-solid fa-seedling"></i> Beitemark
-                            <span class="tooltip-text" data-tooltip="Beiteområde for sau/rein. Vis hensyn!"></span>
+                            <span class="tooltip-text" data-tooltip="Vis hensyn for sau/rein!"></span>
                         </div>
                     </div>
 
@@ -101,12 +101,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </section>
 
                 <div class="map-canvas">
-                    <section class="canvas-container">
-                        <div id="canvas"></div>
-                    </section>
-
                     <section class="trail-map">
                         <div id="map" class="map"></div>
+                    </section>
+                    <span class="hook">|||</span>
+                    <section class="canvas-container">
+                        <div id="canvas"></div>
                     </section>
                 </div>
 

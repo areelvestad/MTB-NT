@@ -19,7 +19,7 @@ async function calculateTrailStats() {
         throw error;
       }
 
-      totalKm += parsedGpx.tracks.reduce((distance, track) => distance + (track.distance.total / 1000), 0); // Convert meters to km
+      totalKm += parsedGpx.tracks.reduce((distance, track) => distance + (track.distance.total / 1000), 0);
       totalDescent += parsedGpx.tracks.reduce((descent, track) => descent + (track.elevation?.negative || 0), 0);
     } catch (error) {
       console.error(`Failed to load GPX data for trail: ${trail.name}`, error);

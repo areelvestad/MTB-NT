@@ -62,14 +62,12 @@ html {
         padding: .25rem .5rem;
         margin: 0;
         background: var(--color-text);
-        border-radius: 1rem 1rem 1rem 0;
+        border-radius: .75rem;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
         font-size: .75rem;
         color: var(--color-bg-2);
         font-family: var(--font-main);
         font-weight: 500;
-        display: none;
-        margin-right: 1rem;
         text-wrap: wrap;
     }
 
@@ -85,40 +83,29 @@ html {
         width: 150%;
     }
 
-    :hover ~ .white.tooltip-text::before {
-        content: 'Ingen bratte eller mer krevende partier. Passer for nybegynnere.';
-    }
-    :hover ~ .green.tooltip-text::before {
-        content: 'Få eller ingen større hindre og skumle partier. Krever noe kjennskap for sykling i terreng.';
-    }
-    :hover ~ .blue.tooltip-text::before {
-        content: 'Bratte partier, steiner og hinder på stien.';
-    }
-    :hover ~ .red.tooltip-text::before {
-        content: 'Krevende partier, bratt, steiner, større hindre, og generelt større risiko.';
-    }
-    :hover ~ .black.tooltip-text::before {
-        content: 'Svært krevende å holde seg på sykkelen hele turen ned. Flere større hindre på stien og partier med større risiko ved fall selv i lav fart.';
+    :hover ~ .trail-grade.tooltip-text::before {
+        content: 'Vanskelighetsgrad';
     }
 
+
     :hover ~ span.Enduro.tooltip-text::before {
-        content: 'I hovedsak oppoverbakke fra start til slutt.';
+        content: 'I hovedsak nedstigning';
     }
     :hover ~ span.XC.tooltip-text::before {
-        content: 'Lite til ingen opp- og nedstigning av betydning.';
+        content: 'Lite til ingen opp- og nedstigning';
     }
 
     :hover ~ .Fort.tooltip-text::before {
-        content: 'Beregn rundt en times tid';
+        content: 'Rundt en times tid';
     }
     :hover ~ .Kvart.tooltip-text::before {
-        content: 'Beregn 2 til 4 timer på turen';
+        content: '2 til 4 timer på turen';
     }
     :hover ~ .Halve.tooltip-text::before {
-        content: 'Rundt 4 timer eller mer på turen';
+        content: '4 timer eller mer på turen';
     }
     :hover ~ .Dagstur.tooltip-text::before {
-        content: 'Dagens mål! Beregn mer enn 5 timer';
+        content: 'Dagens mål!';
     }
 }
 
@@ -635,8 +622,8 @@ body {
                         content: "";
                         width: 0.65rem;
                         height: 0.65rem;
-                        background-color: rgb(255, 0, 0);
-                        outline: 0.25rem solid rgb(34, 34, 34);
+                        background-color: transparent;
+                        outline: 0.25rem solid rgb(36, 36, 36);
                         border-radius: 50%;
                         transform: scale(0);
                         transition: 120ms transform ease-in-out;
@@ -761,57 +748,36 @@ body {
                     padding-bottom: 0.5rem;
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
                     flex-direction: row;
                     gap: 0.25rem;
+                    text-wrap: nowrap;
 
-                    >div {
-                        display: flex;
-                        align-items: center;
-                        height: 1rem;
-                        width: fit-content;
-                        padding-inline: 0.25rem;
-                        background-color: rgb(47, 66, 47);
-                        outline: 1px solid var(--color-bg-2);
-                        font-size: 0.75rem;
-                        font-family: "Roboto";
+                    span {
+                        text-wrap: nowrap;
 
                         i {
-                            margin-right: 0.25rem;
+                            margin-right: .25rem;
                         }
                     }
 
-                    .fa-person-hiking {
+                    div {
                         display: flex;
+                        justify-content: flex-end;
                         align-items: center;
-                        height: 1rem;
-                        font-size: 0.75rem;
-                        padding-inline: 0.25rem;
-                        background-color: rgb(66, 47, 47);
-                        outline: 1px solid rgb(37, 20, 20);
-                    }
-
-                    .fa-person-hiking.Nei {
-                        display: none;
-                    }
-
-                    .fa-person-hiking.Ja:hover {
-                        background-color: rgb(161, 29, 29);
-                        position: relative;
-                    }
-
-                    .fa-person-hiking.Ja:hover::after {
-                        content: "Populær gåtur";
-                        font-family: var(--font-main);
-                        font-weight: 400;
-                        text-wrap: nowrap;
-                        position: absolute;
-                        top: -3px;
-                        left: 1.3rem;
-                        background-color: var(--color-bg-2);
-                        outline: 1px solid var(--color-bg-1);
-                        border-radius: 0.125rem;
-                        padding: 0.25rem 0.25rem;
+                        gap: .25rem;
+                        font-size: .75rem;
                         color: var(--color-text-faded);
+                        margin-right: .5rem;
+
+                        .tooltip-text {
+                            left: auto;
+                            right: 0;
+                        }
+
+                        .tooltip-text::before {
+                            text-wrap: nowrap;
+                        }
                     }
                 }
                 .img-info {
@@ -900,7 +866,7 @@ body {
                 }
             }
 
-            @media (max-width: 800px) {
+            @media (max-width: 600px) {
                 #map {
                     display: flex;
                 }
@@ -915,13 +881,6 @@ body {
                     bottom: 0;
                     left: 0;
                     padding-bottom: .125rem;
-
-                    >#close {
-                        top: 0;
-                        right: 0.25rem;
-                        font-size: 1rem;
-                        padding: 0.25rem;
-                    }
 
                     h4 {
                         font-size: 1.3rem;
@@ -989,7 +948,7 @@ body {
                     }
                 }
             }
-            @media (max-height: 800px) {
+            @media (max-height: 600px) {
                 .trail-desc {
                     display: none;
                 }
@@ -1003,26 +962,6 @@ body {
         margin-inline: auto;
         margin-block: 1rem;
         max-width: 800px;
-
-        div.finner-ikke {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 800px;
-            padding: 1rem;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 30rem;
-            font-size: 2rem;
-            font-family: var(--font-scribble);
-            color: var(--color-text-faded);
-            i {
-                font-size: 1rem;
-                color: var(--color-text-faded);
-                font-family: var(--font-main);
-            }
-        }
 
         section.header {
             margin-inline: 2rem;
@@ -1131,7 +1070,6 @@ body {
         }
 
         section.image-gallery {
-            margin-inline: 0;
             margin-bottom: 1rem;
             position: relative;
             touch-action: none;
@@ -1146,6 +1084,8 @@ body {
                 max-width: 800px;
                 position: relative;
                 overflow: hidden;
+                border-radius: 1rem;
+
 
                 .trail-image {
                     display: none;
@@ -1154,6 +1094,7 @@ body {
                         width: 100%;
                         aspect-ratio: 8/6;
                         object-fit: cover;
+                        display: block;
                     }
 
                     &.active {
@@ -1168,7 +1109,7 @@ body {
                         margin: 0;
                         height: fit-content;
                         width: 100%;
-                        display: flex;
+                        display: block;
                         justify-content: center;
 
                         p {
@@ -1346,6 +1287,26 @@ body {
             max-width: 100%;
             height: auto;
             margin-inline: 1rem;
+            gap: 1rem;
+
+            .hook {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--color-bg-1);
+                font-size: .75rem;
+                padding-block: .25rem;
+                border-radius: 1rem;
+                opacity: .25;
+                pointer-events: none;
+                user-select: none;
+            }
+
+            @media (min-width: 800px) {
+                .hook {
+                    display: none;
+                }
+            }
 
             section.trail-map {
                 margin: 0;
@@ -1456,6 +1417,7 @@ body {
 
         @media (max-width: 800px) {
             .map-canvas {
+                gap: 0;
                 flex-direction: column;
 
                 .trail-map {
