@@ -1555,6 +1555,23 @@ body {
         
     }
 
+    main.mer {
+        max-width: 800px;
+        margin: 0 auto;
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-weight: 400;
+            font-family: var(--font-scribble);
+        }
+
+        p {
+            color: var(--color-text-faded);
+        }
+    }
     footer.bottom-footer {
         width: 100%;
         background: var(--color-bg-2);
