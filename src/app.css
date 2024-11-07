@@ -213,9 +213,9 @@ body {
                         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 
                         .name {
-                            font-size: 1.25rem;
+                            font-size: 1rem;
                             font-weight: bold;
-                            margin-top: 0.25rem;
+                            margin-top: 0.125rem;
                             color: var(--color-text);
                         }
 
@@ -1594,13 +1594,16 @@ body {
         justify-content: center;
         align-items: center;
 
-        h1 {
-            font-weight: 400;
-            font-family: var(--font-scribble);
-        }
+        section {
+            margin-inline: 1rem;
+            h1 {
+                font-weight: 400;
+                font-family: var(--font-scribble);
+            }
 
-        p {
-            color: var(--color-text-faded);
+            p {
+                color: var(--color-text-faded);
+            }
         }
     }
     footer.bottom-footer {
