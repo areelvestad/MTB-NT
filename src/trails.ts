@@ -151,7 +151,7 @@ const listTrails = [
         "description": "Klassiker med en flott sti ned fjellet. Flere litt krevende partier, og siste del er ganske bratt på en steinete sti (OBS: Ruta på kartet er feil på siste del, da jeg var litt for nysgjerrig).",
         "turbeskrivelse": "",
         "type": "Enduro",
-        "grade": "blue",
+        "grade": "red",
         "water": "Vann",
         "severalRoutes": "Ja",
         "surface": "Steinete sti, røtter",

@@ -1486,7 +1486,6 @@ body {
                         display: none;
                     }
                 }
-            
             }
 
             .catalogue-items {
@@ -1553,6 +1552,38 @@ body {
             }
         }
         
+        @media (max-width: 800px) {
+
+            .trail-catalogue {
+                .catalogue-items {
+                    .trail-item {
+                        .image {
+                            img {
+                                width: 150px;
+                            }
+                        }
+                        .content {
+                            .header {
+                                h3 {
+                                    font-size: 1.25rem;
+                                }
+                                span {
+                                    font-size: .75rem;
+                                }
+                            }
+                            p {
+                               font-size: .75rem;
+                            }
+                            .trail-info {
+                                a {
+                                    font-size: .75rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     main.mer {

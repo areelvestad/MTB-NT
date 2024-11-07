@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function createFilterUI() {
     if (filterContainer) {
       filterContainer.innerHTML = `
+        <i class="fa-solid fa-filter"></i>
         <select id="grade-filter">
           <option value="">Vanskelighetsgrad</option>
           <option value="">Alle grader</option>
