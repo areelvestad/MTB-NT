@@ -1336,6 +1336,12 @@ body {
                 } 
 
             }
+
+            @media (max-width: 800px) {
+                .info {
+                    font-size: .875rem;
+                }
+            }
         }
 
         .map-canvas {
