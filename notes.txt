@@ -3,10 +3,9 @@ Trail page:
 Map: fikse zoom til
 
 Katalog: 
-* fikse mobilvisning
-* legge til noe som viser at det er filtrering på mobilvisning
 * nødvendig med mer info???
 
 List:
 * Trail visibility
+* fysisk krevende? 
 * kontaktperson for sti

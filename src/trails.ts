@@ -5,7 +5,7 @@ const listTrails = [
         "name": "Gahperus",
         "route": "Gahperus",
         "description": "Et av de desidert beste områdene for de som er glad høydemeter, men vil komme seg opp relativt kjapt. Her er det grusvei helt til toppen, og mange ruter man kan ta ned fjellet.",
-        "turbeskrivelse": "",
+        "turbeskrivelse": "Start fra parkeringen og følg grusveien opp cirka 5 kilomenter helt til man ser en haug med tømmer, som er startpunkt på ruta.<br><br>Første delen følger man moreneryggene nedover hvor kraftlinja går. Her er det litt fritt fram hvor man vil sykle, men gjerne litt til venstre for å få best tilknytning tilbake på grusveien.<br><br>Andre del går på grusveien cirka 500 meter, så tar man av til venstre langs reingjerdet.<br><br>Der er det stort sett rett fram en morsom og ujevn sti. Droppene kan komme litt brått på. Ta av til høyre fra stien når man ser en del busker foran seg.<br><br>Videre fortsetter turen et lite stykke ned grusveien. Er porten til reingjerdet igjen når du kommer til den, <strong>lukk den igjen</strong> etter deg.<br><br>Etter en stor høyresving skal man ta av linjeveien ned til venstre. En nydelig vei langs ryggen ved Gahperuselva. Her ender man opp ved en anleggsbru. Derfra er det cirka 200 meter med oppoverbakke langs en ujevn sti. I tillegg må man krysse en bekk.<br><br>Så starter man på det siste og mest krevende partiet. Det kommer en steinrøys det finnes en linje gjennom, men den er vanskelig å se. Så er det en bratt, steinete bakke, med en brå sving helt i enden.<br><br>Når du ender opp under en fot til kraftlinja, kan man suse nedover veien i god fart. Men! Her er det noen større steinblokker i veien som man ikke ser gjennom vegetasjonen.<br><br>Den siste biten går langs skuterløypa. Fin og oversiktlig bit, med en rolig avslutning gjennom bjørkeskogen til fylkesveien.<br><br><b>Flere ruter:</b> Fra startpunktet kan man fint fortsette innover mot Kåfjord, som er en nydelig tur. Gruvene ved Njuorjovárri er et fint turmål, men veien ned til Kåfjorddalen er også helt nydelig.<br><br>Man kan selvfølgelig også ta grusveien ned, som nok er morsomest for fartsgale syklister. I tillegg finnes det en rute ned østsiden av Gahperusbekken og en på østsiden av fjellet.<br><br><b>Annet info: </b>Det er reinsdyr på øversiden av reingjerdet stort sett hele sommeren. Vis hensyn!<br><br>I svingen før bakken opp til reingjerdet finner man en helt nydelig badeplass.<br><br>Grusveien opp er kommunal helt fram til Gahperusbekken, som man krysser like etter hyttefeltet.<br><br>Parkering er ved fylkesveien eller ved skuterparkeringa rett ovenfor.",
         "type": "Enduro",
         "grade": "blue",
         "water": "Elv",
@@ -14,7 +14,7 @@ const listTrails = [
         "hikingTrail": "Nei",
         "parking": "69.5394, 21.3321",
         "time": "Kvart dag",
-        "tags": "",
+        "tags": "Beitemark",
         "yrid": "1-302403",
     },
     {
@@ -22,8 +22,8 @@ const listTrails = [
         "area": "Reisadalen",
         "name": "Puntadalen",
         "route": "Puntadalen",
-        "description": "En fin ettermiddagstur langs veien gjennom Puntadalen. Turen er like fin opp som ned, med bakker, bekker, og mye flatt terreng langs en gammel skogsvei. Den kan følges opp til  Ørretvannet, Saravann, Sarafossen, eller helt til Somas.",
-        "turbeskrivelse": "",
+        "description": "En fin liten tur langs veien gjennom Puntadalen. Den er like fin opp som ned, med bakker, bekker, og mye flatt terreng langs en gammel skogsvei. Den kan følges opp til  Ørretvannet, Saravann, Sarafossen, eller helt til Somas.",
+        "turbeskrivelse": "Starten er ved Puntafossen. Det er litt bratt start opp den første kilometeren, men så er det opp og ned gjennom Puntadalen.<br><br>Etter 3 kilometer starter man på stigningen opp til stormyra før Ørretvannet. Når man er der oppe, kan man krysse myra til venstre (merket) å dra til Ørretvannet, eller fortsette langs skogsveien mot Stuoraskáidi.<br><br>Passer fint for nybegynnere som vil prøve seg på terrengsykling. Turen ned er selvsagt høydepunktet, med en litt bratt og morsom slutt.<br><br><b>Flere ruter: </b>Det går fint an å knytte denne turen sammen med <a href='/MTB-NT/trail.html?name=Sarafossen'>Sarafonssen</a> eller <a href='/MTB-NT/trail.html?name=Saraelv'>Saraelv</a>. Stien ned Stuoraskáidi mot Sarafossen er litt steinete. Vil man på langtur kan turen være start mot Somashytta.<br><br><b>Annet info: </b>Man kan møte på reinsdyr i området. Sjeldent man gjør det, men vis hensyn til dyrene.<br><br>Puntafossen er nydelig, og en veldig fin badeplass hvis man trenger å kjøle seg ned etter turen.<br><br>Parkering er ved rasteplassen til Puntafossen eller avkjøringslomma på øversida av fossen.",
         "type": "XC",
         "grade": "green",
         "water": "Bekk, vann",
@@ -32,7 +32,7 @@ const listTrails = [
         "hikingTrail": "Ja",
         "parking": "69.4975, 21.4341",
         "time": "Kvart dag",
-        "tags": "Tursti",
+        "tags": "Tursti Beitemark",
         "yrid": "1-2704853"
     },
     {

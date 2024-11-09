@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     <div class="turbeskrivelse">
                         <h4>Turbeskrivelse</h4>
-                        <p>${trail.turbeskrivelse}</p>
+                        <p class="content">${trail.turbeskrivelse}</p>
+                        <button class="collapsible">Les mer</button>
                     </div>
                 </section>
 
@@ -114,6 +115,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <iframe src="https://www.yr.no/nb/innhold/${trail.yrid}/card.html?mode=dark" allowtransparency="true" background="transparent"></iframe>
                 </a>
             `;
+
+            const collapsibleButton = mainTrailElement.querySelector('.collapsible');
+            collapsibleButton?.addEventListener('click', (event) => {
+                const button = event.target as HTMLElement;
+                const content = button.previousElementSibling as HTMLElement;
+                content.classList.toggle('expanded');
+                button.textContent = content.classList.contains('expanded') ? 'Vis mindre' : 'Vis mer';
+            });
 
             let currentSlideIndex = 0;
 
@@ -291,5 +300,3 @@ async function fetchImages(trailName: string): Promise<{ src: string; descriptio
 
     return images;
 }
-
-
