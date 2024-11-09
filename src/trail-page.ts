@@ -97,8 +97,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="turbeskrivelse">
                         <h4>Turbeskrivelse</h4>
                         <p class="content">${trail.turbeskrivelse}</p>
-                        <button class="collapsible">Les mer</button>
+                        <button class="collapsible">
+                            <i class="fa-solid fa-caret-down"></i>
+                            <i class="fa-solid fa-caret-up" style="display: none;"></i>
+                            <span>Vis mer</span>
+                        </button>
                     </div>
+
                 </section>
 
                 <div class="map-canvas">
@@ -118,11 +123,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             const collapsibleButton = mainTrailElement.querySelector('.collapsible');
             collapsibleButton?.addEventListener('click', (event) => {
-                const button = event.target as HTMLElement;
+                const button = event.currentTarget as HTMLElement;
                 const content = button.previousElementSibling as HTMLElement;
+                const caretDown = button.querySelector('.fa-caret-down') as HTMLElement;
+                const caretUp = button.querySelector('.fa-caret-up') as HTMLElement;
+                const buttonText = button.querySelector('span') as HTMLElement;
+
                 content.classList.toggle('expanded');
-                button.textContent = content.classList.contains('expanded') ? 'Vis mindre' : 'Vis mer';
+                buttonText.textContent = content.classList.contains('expanded') ? 'Vis mindre' : 'Vis mer';
+
+                if (caretDown && caretUp) {
+                    caretDown.style.display = content.classList.contains('expanded') ? 'none' : 'inline';
+                    caretUp.style.display = content.classList.contains('expanded') ? 'inline' : 'none';
+                }
             });
+
 
             let currentSlideIndex = 0;
 
