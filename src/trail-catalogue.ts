@@ -1,19 +1,23 @@
 import { listTrails } from './trails';
+import { calculateStatisticsForTrail } from './trail-stats';
 
 document.addEventListener('DOMContentLoaded', () => {
   const catalogueContainer = document.getElementById('catalogue-items');
   const filterContainer = document.getElementById('trail-filter');
 
-  if (!catalogueContainer) {
-    console.error('Catalogue container not found.');
-    return;
-  }
-
   type Trail = typeof listTrails[number];
 
-  function createTrailItem(trail: Trail): HTMLDivElement {
-    const trailDiv = document.createElement('div');
+  async function createTrailItem(trail: Trail): Promise<HTMLAnchorElement> {
+    const stats = await calculateStatisticsForTrail(trail.name);
+
+    if (!stats) {
+      console.error(`Statistics for trail '${trail.name}' could not be calculated.`);
+      throw new Error(`Statistics not available for trail '${trail.name}'`);
+    }
+    
+    const trailDiv = document.createElement('a');
     trailDiv.className = 'trail-item';
+    trailDiv.href = `/MTB-NT/trail.html?name=${trail.name}`;
 
     trailDiv.innerHTML = `
       <div class="image">
@@ -26,7 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <p>${trail.description}</p>
         <div class="trail-info">
-            <a href="/MTB-NT/trail.html?name=${trail.name}" class="details-link"><i class="fa-solid fa-circle-info"></i> Mer om stien</a>
+            <div class="grade ${trail.grade} tooltip">
+              <i class="fa-solid fa-stairs"></i>
+              <span class="tooltip-text trail-grade"></span>
+            </div>
+            <div class="tooltip">
+              <i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km
+              <span class="tooltip-text" data-tooltip="Distanse"></span>
+            </div>
+            <div class="tooltip">
+                <i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh
+                <span class="tooltip-text" data-tooltip="Høyeste punkt"></span>
+            </div>
         </div>
       </div>
     `;
@@ -34,12 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
     return trailDiv;
   }
 
-  function renderCatalogueItems(trails: Trail[]) {
-    if (!catalogueContainer) return; 
-    catalogueContainer.innerHTML = ''; 
-    trails.forEach((trail: Trail) => {
-      catalogueContainer.appendChild(createTrailItem(trail));
-    });
+  async function renderCatalogueItems(trails: Trail[]) {
+    if (!catalogueContainer) return;
+    catalogueContainer.innerHTML = '';
+
+    for (const trail of trails) {
+      try {
+        const trailElement = await createTrailItem(trail);
+        catalogueContainer.appendChild(trailElement);
+      } catch (error) {
+        console.error(`Failed to create trail item for ${trail.name}:`, error);
+      }
+    }
   }
 
   function createFilterUI() {
