@@ -38,10 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
               <i class="fa-solid fa-ruler"></i> ${stats.totalKm.toFixed(1)} km
               <span class="tooltip-text" data-tooltip="Distanse"></span>
             </div>
-            <div class="tooltip">
-                <i class="fa-solid fa-mountain"></i> ${stats.elevationHigh.toFixed(0)} moh
-                <span class="tooltip-text" data-tooltip="Høyeste punkt"></span>
-            </div>
         </div>
       </div>
     `;
