@@ -9,3 +9,6 @@ List:
 * Trail visibility
 * fysisk krevende? 
 * kontaktperson for sti
+* tydeligere parkering
+* last ned GPX-fil
+* fikse vis mer

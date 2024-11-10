@@ -1308,7 +1308,11 @@ body {
                 p.expanded:before {
                     opacity: 0;
                 }
-                
+
+                p:empty ~ button {
+                    display: none;
+                }
+
                 p:empty::after {
                     content: 'Turbeskrivelse mangler ...';
                 }
