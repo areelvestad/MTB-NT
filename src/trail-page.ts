@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                         <div class="severalRoutes ${trail.severalRoutes} tooltip">
                             <i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter
-                            <span class="tooltip-text" data-tooltip="Flere veivalg man kan ta. Ruten er et forslag"></span>
+                            <span class="tooltip-text" data-tooltip="Flere veivalg. Ruten er et forslag"></span>
                         </div>
                         <div class="${trail.hikingTrail} hikingTrail tooltip">
                             <i class="fa-solid fa-person-hiking"></i> Tursti
