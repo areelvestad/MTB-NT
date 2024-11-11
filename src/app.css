@@ -1342,6 +1342,56 @@ body {
                 }
             }
         }
+        .checkboxes {
+            margin-inline: 2rem;
+            margin-top: .75rem;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            user-select: none;
+            border-bottom: 1px dashed var(--color-bg-1);
+            padding-bottom: .75rem;
+
+            span {
+                color: var(--color-bg-2);
+                padding: .25rem;
+                background-color: var(--color-text-faded);
+                border-radius: .5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 1.75rem;
+                width: 1.75rem;
+            }
+
+            div {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                input[type="checkbox"] {
+                    display: none;
+
+                    &:checked + label {
+                        color: var(--color-text);
+                    }
+                }
+
+                label {
+                    margin-left: 5px;
+                    color: var(--color-bg-1);
+                    cursor: pointer;
+                    text-wrap: nowrap;
+
+                    i {
+                        margin-right: .25rem;
+                    }
+                }
+            }
+        }
 
         .map-canvas {
             display: flex;
@@ -1362,6 +1412,18 @@ body {
                 opacity: .25;
                 pointer-events: none;
                 user-select: none;
+            }
+
+            .marker-parking {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 1.25rem;
+                width: 1.25rem;
+                font-size: 1rem;
+                background-color: var(--color-bg-2);
+                border-radius: .25rem;
+                color: var(--color-text);
             }
 
             @media (min-width: 800px) {

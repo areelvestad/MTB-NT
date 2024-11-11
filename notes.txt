@@ -11,4 +11,4 @@ List:
 * kontaktperson for sti
 * tydeligere parkering
 * last ned GPX-fil
-* fikse vis mer
+* vann

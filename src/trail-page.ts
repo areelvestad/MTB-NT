@@ -105,7 +105,21 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </div>
 
                 </section>
-
+                <section class="checkboxes">
+                    <span><i class="fa-solid fa-map"></i></span>
+                    <div>
+                        <input type="checkbox" id="parkering" name="parkering">
+                        <label for="parkering"><i class="fa-solid fa-square-parking"></i> Parkering</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="flere-ruter" name="flere ruter">
+                        <label for="flere-ruter"><i class="fa-solid fa-arrows-split-up-and-left"></i> Alternative ruter</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="river" name="river">
+                        <label for="river"><i class="fa-solid fa-water"></i> Elvekrysninger</label>
+                    </div>
+                </section>
                 <div class="map-canvas">
                     <section class="trail-map">
                         <div id="map" class="map"></div>
@@ -250,6 +264,33 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                             map.addControl(new mapboxgl.NavigationControl());
                             map.addControl(new mapboxgl.FullscreenControl());
+
+                            let parkingMarker: mapboxgl.Marker | null = null;
+                            const parkingCheckbox = document.getElementById('parkering') as HTMLInputElement;
+
+                            if (parkingCheckbox) {
+                                parkingCheckbox.addEventListener('change', () => {
+                                    if (parkingCheckbox.checked) {
+                                        const [lat, lng] = trail.parking.split(',').map(coord => parseFloat(coord.trim()));
+
+                                        const markerElement = document.createElement('div');
+                                        markerElement.className = 'marker-parking';
+                                        markerElement.innerHTML = `<i class="fa-solid fa-square-parking"></i>`;
+
+                                        parkingMarker = new mapboxgl.Marker({
+                                            element: markerElement,
+                                            anchor: 'center'
+                                        })
+                                            .setLngLat([lng, lat])
+                                            .addTo(map);
+                                    } else {
+                                        if (parkingMarker) {
+                                            parkingMarker.remove();
+                                            parkingMarker = null;
+                                        }
+                                    }
+                                });
+                            }
                         }
 
                         let distanceMarker: mapboxgl.Marker | null = null;
@@ -290,17 +331,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function fetchImages(trailName: string): Promise<{ src: string; description: string }[]> {
     const images: { src: string; description: string }[] = [];
 
-    const metadataPath = `./img/metadata.json`;
+    const metadataPath = `./trails/trailMetadata.json`;
     try {
         const metadataResponse = await fetch(metadataPath);
         if (metadataResponse.ok) {
             const metadata = await metadataResponse.json();
 
             if (metadata.trails[trailName]) {
-                metadata.trails[trailName].forEach((image: { folder: string; description: string }) => {
+                const trailImages = metadata.trails[trailName].img;
+                Object.entries(trailImages).forEach(([folder, description]) => {
                     images.push({
-                        src: image.folder,
-                        description: '<p>' + image.description + '</p>',
+                        src: folder,
+                        description: '<p>' + description + '</p>',
                     });
                 });
             } else {

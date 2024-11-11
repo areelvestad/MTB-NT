@@ -318,7 +318,7 @@ const listTrails = [
         "severalRoutes": "Nei",
         "surface": "Fjellsti, veldig steinete sti",
         "hikingTrail": "Ja",
-        "parking": "69.4727, 21.48772",
+        "parking": "69.7863, 20.9476",
         "time": "Fort gjort",
         "tags": "Tursti",
         "yrid": "1-311923"
