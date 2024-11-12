@@ -107,17 +107,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </section>
                 <section class="checkboxes">
                     <span><i class="fa-solid fa-map"></i></span>
-                    <div>
+                    <div class="parkering">
                         <input type="checkbox" id="parkering" name="parkering">
                         <label for="parkering"><i class="fa-solid fa-square-parking"></i> Parkering</label>
                     </div>
-                    <div>
+                    <div class="alternate">
                         <input type="checkbox" id="flere-ruter" name="flere ruter">
                         <label for="flere-ruter"><i class="fa-solid fa-arrows-split-up-and-left"></i> Alternative ruter</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="river" name="river">
-                        <label for="river"><i class="fa-solid fa-water"></i> Elvekrysninger</label>
                     </div>
                 </section>
                 <div class="map-canvas">
@@ -291,6 +287,87 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     }
                                 });
                             }
+
+                            const flereRuterCheckbox = document.getElementById('flere-ruter') as HTMLInputElement;
+                            let alternateRouteLayerId = `${trail.name}-alternate-route`;
+                            let shadowLayerId = `${trail.name}-alternate-shadow`;
+                            
+                            if (flereRuterCheckbox) {
+                                const flereRuterCheckboxWrapper = document.querySelector('.alternate') as HTMLElement;
+                            
+                                const geoJsonPath = `./trails/alternate/${trail.name}_alternate.geojson`;
+                            
+                                fetch(geoJsonPath)
+                                    .then(response => {
+                                        if (!response.ok) {
+                                            if (flereRuterCheckboxWrapper) {
+                                                flereRuterCheckboxWrapper.style.display = 'none';
+                                            }
+                                            return null;
+                                        }
+                                        return response.json();
+                                    })
+                                    .then(geoJsonData => {
+                                        if (!geoJsonData) {
+                                            return;
+                                        }
+                            
+                                        flereRuterCheckbox.addEventListener('change', () => {
+                                            if (flereRuterCheckbox.checked) {
+                                                if (!map.getSource(alternateRouteLayerId)) {
+                                                    map.addSource(alternateRouteLayerId, {
+                                                        type: 'geojson',
+                                                        data: geoJsonData
+                                                    });
+
+                                                    map.addLayer({
+                                                        id: shadowLayerId,
+                                                        type: 'line',
+                                                        source: alternateRouteLayerId,
+                                                        paint: {
+                                                            'line-color': 'rgb(20, 20, 20)',
+                                                            'line-width': 5
+                                                        }
+                                                    });
+                            
+                                                    map.addLayer({
+                                                        id: alternateRouteLayerId,
+                                                        type: 'line',
+                                                        source: alternateRouteLayerId,
+                                                        paint: {
+                                                            'line-color': 'rgb(120, 69, 69)',
+                                                            'line-width': 2
+                                                        }
+                                                    });
+                                                }
+                                            } else {
+                                                if (map.getLayer(alternateRouteLayerId)) {
+                                                    map.removeLayer(alternateRouteLayerId);
+                                                }
+                                                if (map.getLayer(shadowLayerId)) {
+                                                    map.removeLayer(shadowLayerId);
+                                                }
+                                                if (map.getSource(alternateRouteLayerId)) {
+                                                    map.removeSource(alternateRouteLayerId);
+                                                }
+                                            }
+                                        });
+                                    })
+                                    .catch(error => {
+                                        console.error('Error fetching GeoJSON file:', error);
+                                        if (flereRuterCheckboxWrapper) {
+                                            flereRuterCheckboxWrapper.style.display = 'none';
+                                        }
+                                    });
+                            }
+                            
+                            
+                            
+
+
+                            
+                            
+
                         }
 
                         let distanceMarker: mapboxgl.Marker | null = null;

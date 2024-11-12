@@ -97,7 +97,7 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                 layout: {
                     'line-cap': 'round',
                     'line-join': 'round',
-                    'line-sort-key': 1,
+                    'line-sort-key': 5,
                 }
             });
 
@@ -112,7 +112,7 @@ async function addTrailsToMap(map: mapboxgl.Map, trailNameFilter?: string) {
                 layout: {
                     'line-cap': 'round',
                     'line-join': 'round',
-                    'line-sort-key': 2,
+                    'line-sort-key': 6,
                 }
             });
 
