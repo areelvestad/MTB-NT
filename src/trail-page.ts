@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 </section>
                 <section class="checkboxes">
-                    <span><i class="fa-solid fa-map"></i></span>
+                    <span title="Vis i kartet"><i class="fa-solid fa-map"></i></span>
                     <div class="parkering">
                         <input type="checkbox" id="parkering" name="parkering">
                         <label for="parkering"><i class="fa-solid fa-square-parking"></i> Parkering</label>

@@ -1087,7 +1087,7 @@ body {
 
                     img {
                         width: 100%;
-                        aspect-ratio: 8/6;
+                        aspect-ratio: 4/3;
                         object-fit: cover;
                         display: block;
                     }
@@ -1112,8 +1112,8 @@ body {
                             width: 100%;
                             margin: 0 0;
                             outline: 1px solid var(--color-bg-1);
-                            background: rgba(32, 32, 32, 0.7);
-                            backdrop-filter: blur(3px);
+                            background: var(--color-bg-2);
+                            opacity: .9;
                             color: var(--color-text);
                             font-weight: 300;
                             font-size: 1rem;
