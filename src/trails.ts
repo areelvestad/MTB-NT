@@ -300,7 +300,7 @@ const listTrails = [
         "severalRoutes": "Ja",
         "surface": "Sti, mye steiner og røtter, skogsvei",
         "hikingTrail": "Ja",
-        "parking": "69.7863, 20.9476",
+        "parking": "69.48203, 21.476674678841462",
         "time": "Fort gjort",
         "tags": "Tursti",
         "yrid": "10-970961"

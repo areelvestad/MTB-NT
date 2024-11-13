@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                             <i class="fa-solid fa-clock"></i><div>${trail.time}</div>
                             <span class="tooltip-text ${trail.time}"></span>
                         </div>
-                        <div class="severalRoutes ${trail.severalRoutes} tooltip">
+                        <div class="severalRoutes ${trail.severalRoutes} tooltip" style="display:none;">
                             <i class="fa-solid fa-arrows-split-up-and-left"></i> Flere ruter
                             <span class="tooltip-text" data-tooltip="Flere veivalg. Ruten er et forslag"></span>
                         </div>
