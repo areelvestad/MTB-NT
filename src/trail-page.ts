@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                                         type: 'line',
                                                         source: alternateRouteLayerId,
                                                         paint: {
-                                                            'line-color': 'rgb(120, 69, 69)',
+                                                            'line-color': 'rgb(200, 200, 200)',
                                                             'line-width': 2
                                                         }
                                                     });
