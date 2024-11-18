@@ -3,14 +3,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
-    /* --color-bg-1: #444;
-    --color-bg-2: #222;
-    --color-text: whitesmoke; */
-    --color-bg-1: #444;
-    --color-bg-2: #222;
-    --color-text: whitesmoke;
-    --test: rgb(240, 49, 49);
-    --color-text-faded: rgb(167, 182, 166);
+    color-scheme: light dark;
+
+    --light-color-bg-1: #d8d8d8;
+    --light-color-bg-2: #ffffff;
+    --light-color-text: rgb(26, 26, 26);
+    --light-color-text-faded: rgb(87, 94, 87);
+
+    --dark-color-bg-1: #444;
+    --dark-color-bg-2: #222;
+    --dark-color-text: whitesmoke;
+    --dark-color-text-faded: rgb(167, 182, 166);
+    
+    --color-bg-1: light-dark(var(--light-color-bg-1), var(--dark-color-bg-1));
+    --color-bg-2: light-dark(var(--light-color-bg-2), var(--dark-color-bg-2));
+    --color-text: light-dark(var(--light-color-text), var(--dark-color-text));
+    --color-text-faded: light-dark(var(--light-color-text-faded), var(--dark-color-text-faded));
     --font-main: Merriweather;
     --font-scribble: Gloria Hallelujah, cursive;
     --heigh-with-nav: calc(100svh - 3.25rem);
@@ -51,6 +59,7 @@ html {
     position: relative;
 
     .tooltip-text {
+        color-scheme: dark;
         display: none;
         position: absolute;
         bottom: calc(100% + .5rem);
@@ -59,7 +68,7 @@ html {
         padding: .25rem .5rem;
         background: var(--color-text);
         border-radius: .75rem;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+        box-shadow: 0 0 .25rem var(--color-bg-1);
         font-size: .75rem;
         color: var(--color-bg-2)!important;
         font-family: var(--font-main);
@@ -162,7 +171,7 @@ body {
             .nav-search {
                 margin-top: 0.25rem;
                 pointer-events: all;
-                background-color: #3f3f3f;
+                background-color: var(--color-bg-1);
                 padding: 0.5rem 1rem;
                 border-radius: 1rem;
                 display: flex;
@@ -191,9 +200,8 @@ body {
                     overflow-y: auto;
                     z-index: 9999;
                     background: color-mix(in srgb,
-                            var(--color-bg-2) 25%,
-                            rgba(0, 0, 0, 0) 75%);
-                    backdrop-filter: blur(5px);
+                            var(--color-bg-2) 95%,
+                            rgba(0, 0, 0, 0) 5%);
                     border-left: 1px solid rgba(0, 0, 0, 0.1);
 
                     &:empty {
@@ -205,7 +213,10 @@ body {
                         padding: 0.125rem 1rem;
                         border-bottom: 1px dashed var(--color-bg-2);
                         width: 100%;
-                        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+                        
+                        * {
+                            transition: all .1s ease-in-out;
+                        }
 
                         .name {
                             font-size: 1rem;
@@ -218,29 +229,28 @@ body {
                             font-weight: 400;
                             font-size: 0.75rem;
                             margin-bottom: 0.25rem;
-                            color: var(--color-text);
+                            color: var(--color-text-faded);
                             opacity: 0.7;
                         }
 
                         &:hover {
+                            
                             * {
                                 color: var(--color-text);
                                 transform: translateX(-5px);
-                                text-shadow: 1px 1px 1px black;
                             }
                         }
                     }
 
                     .search-result-item.no-result {
                         color: var(--color-text-faded);
-                        font-size: 1.5rem;
-                        text-shadow: 1px 1px 1px black;
+                        font-size: 1rem;
+                        font-style: italic;
                     }
 
                     ::-webkit-scrollbar {
-                        width: 0px;
+                        max-width: 0px;
                         background: transparent;
-                        /* make scrollbar transparent */
                     }
                 }
             }
@@ -292,6 +302,8 @@ body {
             overflow: hidden;
             margin: unset;
             text-shadow: 2px 2px 3px black;
+
+            color-scheme: dark;
 
             &::after {
                 position: absolute;
@@ -537,7 +549,9 @@ body {
                     z-index: 999;
                     padding: 0.5rem 1rem;
                     border-radius: 1rem;
-                    background: rgba(27, 27, 27, 0.76);
+                    background: color-mix(in srgb,
+                    var(--color-bg-2) 70%,
+                    rgba(0, 0, 0, 0) 30%);
                     color: var(--color-text-faded);
                 }
             }
@@ -670,9 +684,9 @@ body {
                 padding: 1rem 1rem 1rem 1rem;
                 margin-right: 3rem;
                 background-color: color-mix(in srgb,
-                        var(--color-bg-2) 80%,
-                        rgba(0, 0, 0, 0) 20%);
-                backdrop-filter: blur(0.5rem);
+                        var(--color-bg-2) 95%,
+                        rgba(0, 0, 0, 0) 5%);
+                /* backdrop-filter: blur(0.5rem); */
                 border-radius: 1rem;
 
                 >#close {
@@ -992,10 +1006,6 @@ body {
                     align-items: center;
                     text-wrap: nowrap;
                     gap: .5rem;
-
-                    .fa-solid {
-                        text-shadow: 0px 0px 3px black;
-                    }
                 }
 
                 .grade>i {
@@ -1009,7 +1019,6 @@ body {
 
                 .white>i {
                     background-color: rgb(214, 211, 211);
-                    text-shadow: none;
                     color: var(--color-bg-2);
                 }
 
@@ -1119,7 +1128,6 @@ body {
                             font-size: 1rem;
                             line-height: 1.5rem;
                             text-align: start;
-                            text-shadow: 1px 1px 3px black;
 
                             &:empty {
                                 display: none;
@@ -1133,6 +1141,8 @@ body {
                 }
 
                 .gallery-navigation {
+                    color-scheme: dark;
+
                     position: absolute;
                     top: 0;
                     width: 100%;
@@ -1145,7 +1155,7 @@ body {
                         border: none;
                         color: var(--color-text);
                         font-size: 2rem;
-                        text-shadow: 0px 3px 3px black;
+                        text-shadow: 0px 3px 3px var(--color-bg-2);
                         padding: 0.5rem 1rem;
                         cursor: pointer;
                         transition: scale 0.3s;
@@ -1161,6 +1171,8 @@ body {
                 }
 
                 .image-counter {
+                    color-scheme: dark;
+
                     position: absolute;
                     top: 0.5rem;
                     left: 0.5rem;
@@ -1681,10 +1693,6 @@ body {
                                 gap: .5rem;
                                 font-size: .75rem;
                                 color: var(--color-text-faded);
-
-                                .fa-solid {
-                                    text-shadow: 0px 0px 3px black;
-                                }
                             }
 
                             .grade>i {
@@ -1699,7 +1707,6 @@ body {
 
                             .white>i {
                                 background-color: rgb(214, 211, 211);
-                                text-shadow: none;
                                 color: var(--color-bg-2);
                             }
 
