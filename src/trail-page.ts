@@ -126,6 +126,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </section>
                 </div>
 
+                <a class="dld-gpx" href="./public/trails/${trail.name}.gpx"> 
+                    <i class="fa-solid fa-download"></i>Last ned GPX-fil
+                </a>
+
                 <a class="iframe" href="https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/${trail.yrid}/">
                     <iframe src="https://www.yr.no/nb/innhold/${trail.yrid}/card.html?mode=dark" allowtransparency="true" background="transparent"></iframe>
                 </a>

@@ -1536,6 +1536,18 @@ body {
             }
         }
 
+        a.dld-gpx {
+            color: var(--color-bg-1);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            text-decoration: 1px underline dashed;
+            text-underline-offset: .325rem;
+
+            i {
+                margin-right: .5rem;
+            }
+        }
+
         a.iframe {
             display: flex;
             width: 100%;
