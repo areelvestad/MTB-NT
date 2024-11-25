@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     </section>
                 </div>
 
-                <a class="dld-gpx" href="./public/trails/${trail.name}.gpx"> 
+                <a class="dld-gpx" href="./trails/${trail.name}.gpx"> 
                     <i class="fa-solid fa-download"></i>Last ned GPX-fil
                 </a>
 
